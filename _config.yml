@@ -10,21 +10,22 @@
 ############################
 
 # Name of website
-title: My Website
+title: Arquitectura de Computadoras
 
 # Your name to show in the footer
-author: Some Person
+author: Josué David Hernández González
 
 ###############################################
 # --- List of links in the navigation bar --- #
 ###############################################
 
 navbar-links:
-  About Me: "aboutme"
-  Resources:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
-    - Learn markdown: "https://www.markdowntutorial.com/"
-  Author's home: "https://deanattali.com"
+  Unidades:
+    - Unidad I: "https://beautifuljekyll.com"
+    - Unidad II: "https://www.markdowntutorial.com/"
+    - Unidad III: "https://www.markdowntutorial.com/"
+    - Unidad IV: "https://www.markdowntutorial.com/"
+   Prácticas:
 
 ################
 # --- Logo --- #
