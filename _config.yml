@@ -20,12 +20,12 @@ author: Josué David Hernández González
 ###############################################
 
 navbar-links:
-  Unidades:
+Unidades:
     - Unidad I: "https://beautifuljekyll.com"
     - Unidad II: "https://www.markdowntutorial.com/"
     - Unidad III: "https://www.markdowntutorial.com/"
     - Unidad IV: "https://www.markdowntutorial.com/"
-   Prácticas: "https://www.markdowntutorial.com/"
+Prácticas: "https://www.markdowntutorial.com/"
 
 ################
 # --- Logo --- #
