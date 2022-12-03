@@ -1,54 +1,54 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Arquitectura de Computadoras</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 </head>
+
 <body>
-  <nav class="navbar" role="navigation" aria-label="dropdown navigation">
-    <a class="navbar-item">
-      <img src="https://bulma.io/images/bulma-logo.png"
-        alt="Bulma: Free, open source, and modern CSS framework based on Flexbox" width="112" height="28">
-    </a>
-
-    <div class="navbar-item has-dropdown is-active">
-      <a class="navbar-link">
-        Unidades
-      </a>
-
-      <div class="navbar-dropdown">
-        <a class="navbar-item">
-          Unidad 1
-        </a>
-        <a class="navbar-item">
-          Unidad 2
-        </a>
-        <a class="navbar-item">
-          Unidad 3
-        </a>
-        <a class="navbar-item">
-          Unidad 4
-        </a>
-        <hr class="navbar-divider">
-        <div class="navbar-item">
-          Version 0.9.4
+  <nav class="navbar">
+    <div class="container">
+      <div id="navMenu" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item">
+            Inicio
+          </a>
+          <a class="navbar-item" href="unidades.html">
+            Unidades
+          </a>
+          <a href="practicas.html" class="navbar-item">
+            Prácticas
+          </a>
+        </div>
+  
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-dark" href="https://github.com/wrongcowboy" target="_blank">Github</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </nav>
-
-  <section class="hero is-primary">
+  
+  <section class="hero is-dark is-fullheight-with-navbar ">
     <div class="hero-body">
-      <p class="title">
+      <p class="title px-5 py-5">
         Arquitectura de Computadoras
-      </p>
-      <p class="subtitle">
-        Realizado por <strong>Josué David Hernández González</strong> 
       </p>
     </div>
   </section>
-</body>
 
+  <footer class="hero-foot">
+    <div class="content has-text-centered">
+      <p class="is-small">
+        Sitio realizado por <strong>Josué David Hernández González</strong>
+      </p>
+    </div>
+  </footer>
+</body>
 </html>
