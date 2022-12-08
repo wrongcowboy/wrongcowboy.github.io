@@ -1,11 +1,246 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unidad 4</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 </head>
+
 <body>
-    
+    <section>
+        <nav class="navbar has-shadow" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+
+
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                    data-target="navbarBasicExample" id="burger">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item " href="index.html">
+                        Inicio
+                    </a>
+
+                    <div class="navbar-item has-dropdown is-hoverable has-text-grey">
+                        <a class="navbar-link">
+                            Unidades
+                        </a>
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item" href="unidad1.html">
+                                Unidad 1
+                            </a>
+                            <a class="navbar-item" href="unidad2.html">
+                                Unidad 2
+                            </a>
+                            <a class="navbar-item" href="unidad3.html">
+                                Unidad 3
+                            </a>
+                            <a class="navbar-item" href="unidad4.html">
+                                Unidad 4
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                            Prácticas
+                        </a>
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item" href="/docs/JDHG - PRÁCTICA 1.pdf" target="_blank">
+                                Práctica 1
+                            </a>
+                            <a class="navbar-item" href="/docs/JDHG - PRÁCTICA 2.pdf" target="_blank">
+                                Práctica 2
+                            </a>
+                            <a class="navbar-item" href="/docs/JDHG - PRÁCTICA 3.pdf" target="_blank">
+                                Práctica 3
+                            </a>
+                            <a class="navbar-item" href="/docs/JDHG - PRÁCTICA 4.pdf" target="_blank">
+                                Práctica 4
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <a class="button is-dark" href="https://github.com/wrongcowboy" target="_blank">
+                                <strong>Github</strong>
+                            </a>
+                            <a class="button is-info" href="https://saltillo.tecnm.mx/" target="_blank">
+                                <strong>Sitio ITS</strong>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <section class="is-medium">
+
+        <div class="container has-shadow has-text-centered py-1">
+            <h3 class="title is-3">Unidad 4. Procesamiento Paralelo</h3>
+            <h5 class="subtitle is-5 has-text-left">4.1 Aspectos Básicos de la computación paralela</h5>
+            <p class="has has-text-justified">La computación paralela es una forma de cómputo en la que muchas
+                instrucciones se ejecutan simultáneamente, operando sobre el
+                principio de que problemas grandes, a menudo se pueden dividir en
+                unos más pequeños, que luego son resueltos simultáneamente (en
+                paralelo). Hay varias formas diferentes de computación paralela:
+                paralelismo a nivel de bit, paralelismo a nivel de instrucción,
+                paralelismo de datos y paralelismo de tareas. El paralelismo se ha
+                empleado durante muchos años, sobre todo en la computación de
+                altas prestaciones, pero el interés en ella ha crecido últimamente
+                debido a las limitaciones físicas que impiden el aumento de la
+                frecuencia. Como el consumo de energía y por consiguiente la
+                generación de calor de las computadoras constituye una
+                preocupación en los últimos años, la computación en paralelo se ha
+                convertido en el paradigma dominante en la arquitectura de
+                computadores, principalmente en forma de procesadores
+                multinúcleo.</p>
+            <figure class="image is-1by1 has-addons-right">
+                <img src="https://bulma.io/images/placeholders/128x128.png">
+            </figure>
+            <p class="has-text-justified py-2">Los programas informáticos paralelos son más difíciles de escribir
+                que los secuenciales, porque la concurrencia introduce nuevos tipos
+                de errores de software, siendo las condiciones de carrera los más
+                comunes. La comunicación y sincronización entre diferentes
+                subtareas son algunos de los mayores obstáculos para obtener un
+                buen rendimiento del programa paralelo. La máxima aceleración
+                posible de un programa como resultado de la paralelización se
+                conoce como la ley de Amdahl.</p>
+
+            <h5 class="subtitle is-5 has-text-left">
+                Ley de Amdahl y ley de Gustafson
+            </h5>
+            <p class="has-text-justified py-2">
+                Idealmente, la aceleración a partir de la paralelización es lineal,
+                doblar el número de elementos de procesamiento debe reducir a la
+                mitad el tiempo de ejecución y doblarlo por segunda vez debe
+                nuevamente reducir el tiempo a la mitad. Sin embargo, muy pocos
+                algoritmos paralelos logran una aceleración óptima. La mayoría
+                tienen una aceleración casi lineal para un pequeño número de
+                elementos de procesamiento, y pasa a ser constante para un gran
+                número de elementos de procesamiento.
+                La aceleración potencial de un algoritmo en una plataforma de
+                cómputo en paralelo está dada por la ley de Amdahl, formulada
+                originalmente por Gene Amdahl en la década de 1960. Esta señala
+                que una pequeña porción del programa que no pueda paralelizarse
+                va a limitar la aceleración que se logra con la paralelización. Los
+                programas que resuelven problemas matemáticos o ingenieriles
+                típicamente consisten en varias partes paralelizables y varias no
+                paralelizables (secuenciales).
+                La ley de Gustafson es otra ley en computación que está en estrecha
+                relación con la ley de Amdahl. Ambas leyes asumen que el tiempo
+                de funcionamiento de la parte secuencial del programa es
+                independiente del número de procesadores. La ley de Amdahl
+                supone que todo el problema es de tamaño fijo, por lo que la
+                cantidad total de trabajo que se hará en paralelo también es
+                independiente del número de procesadores, mientras que la ley de
+                Gustafson supone que la cantidad total de trabajo que se hará en
+                paralelo varía linealmente con el número de procesadores.
+            </p>
+            <h5 class="subtitle is-5 has-text-left">
+                Dependencias
+            </h5>
+            <p class="has-text-justified py-2">
+                Entender la dependencia de datos es fundamental en la
+                implementación de algoritmos paralelos. Ningún programa puede
+                ejecutar más rápidamente que la cadena más larga de cálculos
+                dependientes (conocida como la ruta crítica), ya que los cálculos que
+                dependen de cálculos previos en la cadena deben ejecutarse en
+                orden. Sin embargo, la mayoría de los algoritmos no consisten sólo
+                de una larga cadena de cálculos dependientes; generalmente hay
+                oportunidades para ejecutar cálculos independientes en paralelo.
+                Sea Pi y Pj dos segmentos del programa. Las condiciones de
+                Bernstein describen cuando los dos segmentos son independientes y
+                pueden ejecutarse en paralelo. Para Pi
+                , sean Ii
+                todas las variables de
+                entrada y Oi
+                las variables de salida, y del mismo modo para Pj
+                . Pi y
+                Pj son independientes si satisfacen.
+            </p>
+            <p class="has-text-justified py-2">
+                Una violación de la primera condición introduce una dependencia de
+                flujo, correspondiente al primer segmento que produce un resultado
+                utilizado por el segundo segmento. La segunda condición representa
+                una anti-dependencia, cuando el segundo segmento (Pj) produce una
+                variable que necesita el primer segmento (Pi). La tercera y última
+                condición representa una dependencia de salida: Cuando dos
+                segmentos escriben en el mismo lugar, el resultado viene del último
+                segmento ejecutado.
+            </p>
+            <h5 class="subtitle is-5 has-text-left">
+                Condiciones de carrera, exclusión mutua, sincronización, y
+                desaceleración paralela.
+            </h5>
+            <p class="has-text-justified py-2">
+                Las subtareas en un programa paralelo a menudo son llamadas hilos.
+                Algunas arquitecturas de computación paralela utilizan versiones
+                más pequeñas y ligeras de hilos conocidas como hebras, mientras
+                que otros utilizan versiones más grandes conocidos como procesos.
+                Sin embargo, «hilos» es generalmente aceptado como un término
+                genérico para las subtareas. Los hilos a menudo tendrán que
+                actualizar algunas variables que se comparten entre ellos. Las
+                instrucciones entre los dos programas pueden entrelazarse en
+                cualquier orden.
+                Las aplicaciones a menudo se clasifican según la frecuencia con que
+                sus subtareas se sincronizan o comunican entre sí. Una aplicación
+                muestra un paralelismo de grano fino si sus subtareas deben
+                comunicase muchas veces por segundo, se considera paralelismo de
+                grano grueso si no se comunican muchas veces por segundo, y es
+                vergonzosamente paralelo si nunca o casi nunca se tienen que
+                comunicar.
+            <p class="has-text-justified py-1">
+                Aplicaciones vergonzosamente paralelas son consideradas las más
+                fáciles de paralelizar.</p>
+            <p class="has-text-justified py-1">Grano de paralelismo.</p>
+            <p class="has-text-justified py-1">Muy grueso: Programas.</p>
+            <p class="has-text-justified py-1">Grueso: Subprogramas, tareas.</p>
+            <p class="has-text-justified py-1">Fino: Instrucción.</p>
+            <p class="has-text-justified py-1">Muy fino: Fases de instrucción.</p>
+            </p>
+            <h5 class="subtitle is-5 has-text-left">
+                <strong> Modelos de consistencia</strong>
+            </h5>
+            <p class="has-text-justified">
+                Los lenguajes de programación en paralelo y computadoras paralelas
+                deben tener un modelo de consistencia de datos también conocido
+                como un modelo de memoria.
+                El modelo de consistencia define reglas para las operaciones en la
+                memoria del ordenador y cómo se producen los resultados.
+                Uno de los primeros modelos de consistencia fue el modelo de
+                consistencia secuencial de Leslie Lamport. La consistencia
+                secuencial es la propiedad de un programa en la que su ejecución en
+                paralelo produce los mismos resultados que un programa secuencial.
+                Específicamente, es un programa secuencial consistente si "... los
+                resultados de una ejecución son los mismos que se obtienen si las
+                operaciones de todos los procesadores son ejecutadas en un orden
+                secuencial, y las operaciones de cada procesador individual aparecen
+                en esta secuencia en el orden especificado por el programa".
+            </p>
+        </div>
+
+    </section>
+
+    <footer class="footer has-background-dark py-6">
+        <div class="has-text-centered">
+            <p class="has-text-white">
+                Sitio realizado por <strong class="has-text-white">Josué David Hernández González</strong>
+            </p>
+        </div>
+    </footer>
+    <script src="index.js"></script>
 </body>
+
 </html>
