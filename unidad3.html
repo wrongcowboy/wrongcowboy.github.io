@@ -1,109 +1,268 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unidad 3</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unidad 3</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 </head>
 
 <body>
-    <section>
-      <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-  
-  
-          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample"
-            id="burger">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
+  <section>
+    <nav class="navbar has-shadow" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample"
+          id="burger">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item " href="index.html">
+            Inicio
           </a>
-        </div>
-  
-        <div id="navbarBasicExample" class="navbar-menu">
-          <div class="navbar-start">
-            <a class="navbar-item " href="index.html">
-              Inicio
+
+          <div class="navbar-item has-dropdown is-hoverable has-text-grey">
+            <a class="navbar-link">
+              Unidades
             </a>
-  
-            <div class="navbar-item has-dropdown is-hoverable has-text-grey">
-              <a class="navbar-link">
-                Unidades
+            <div class="navbar-dropdown">
+              <a class="navbar-item" href="unidad1.html">
+                Unidad 1
               </a>
-              <div class="navbar-dropdown">
-                <a class="navbar-item" href="unidad1.html">
-                  Unidad 1
-                </a>
-                <a class="navbar-item" href="unidad2.html">
-                  Unidad 2
-                </a>
-                <a class="navbar-item" href="unidad3.html">
-                  Unidad 3
-                </a>
-                <a class="navbar-item" href="unidad4.html">
-                  Unidad 4
-                </a>
-              </div>
-            </div>
-  
-            <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link">
-                Prácticas
+              <a class="navbar-item" href="unidad2.html">
+                Unidad 2
               </a>
-              <div class="navbar-dropdown">
-                <a class="navbar-item" href="/docs/JDHG - PRÁCTICA 1.pdf" target="_blank">
-                  Práctica 1
-                </a>
-                <a class="navbar-item" href="/docs/JDHG - PRÁCTICA 2.pdf" target="_blank">
-                  Práctica 2
-                </a>
-                <a class="navbar-item" href="/docs/JDHG - PRÁCTICA 3.pdf" target="_blank">
-                  Práctica 3
-                </a>
-                <a class="navbar-item" href="/docs/JDHG - PRÁCTICA 4.pdf" target="_blank">
-                  Práctica 4
-                </a>
-              </div>
+              <a class="navbar-item" href="unidad3.html">
+                Unidad 3
+              </a>
+              <a class="navbar-item" href="unidad4.html">
+                Unidad 4
+              </a>
             </div>
           </div>
-  
-          <div class="navbar-end">
-            <div class="navbar-item">
-              <div class="buttons">
-                <a class="button is-dark" href="https://github.com/wrongcowboy" target="_blank">
-                  <strong>Github</strong>
-                </a>
-                <a class="button is-info" href="https://saltillo.tecnm.mx/" target="_blank">
-                  <strong>Sitio ITS</strong>
-                </a>
-              </div>
+
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              Prácticas
+            </a>
+            <div class="navbar-dropdown">
+              <a class="navbar-item" href="/docs/JDHG - PRÁCTICA 1.pdf" target="_blank">
+                Práctica 1
+              </a>
+              <a class="navbar-item" href="/docs/JDHG - PRÁCTICA 2.pdf" target="_blank">
+                Práctica 2
+              </a>
+              <a class="navbar-item" href="/docs/JDHG - PRÁCTICA 3.pdf" target="_blank">
+                Práctica 3
+              </a>
+              <a class="navbar-item" href="/docs/JDHG - PRÁCTICA 4.pdf" target="_blank">
+                Práctica 4
+              </a>
             </div>
           </div>
         </div>
-      </nav>
-    </section>
-  
-    <container>
-      <section class="hero is-dark is-fullheight-with-navbar">
-        <div class="hero-body has-text-centered">
-          <p class="title px-5 py-5">
-            Arquitectura de Computadoras
-          </p>
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-dark" href="https://github.com/wrongcowboy" target="_blank">
+                <strong>Github</strong>
+              </a>
+              <a class="button is-info" href="https://saltillo.tecnm.mx/" target="_blank">
+                <strong>Sitio ITS</strong>
+              </a>
+            </div>
+          </div>
         </div>
-      </section>
-    </container>
-  
-    <section>
-      <footer class="hero-foot">
-        <div class="content has-text-centered ">
-          <p class="is-small py-4">
-            Sitio realizado por <strong>Josué David Hernández González</strong>
-          </p>
-        </div>
-      </footer>
-    </section>
-    <script src="index.js"></script>
-  </body>
+      </div>
+    </nav>
+  </section>
+
+  <section class="is-medium">
+
+    <div class="container has-shadow has-text-centered py-1">
+      <h3 class="title is-3">Unidad 3 - Selección de componentes para ensamble de equipo
+        de cómputo</h3>
+      <h5 class="subtitle is-5 has-text-left">3.1 Chip Set</h5>
+      <p class="py-1 has-text-justified">
+        Un chipset es el conjunto de circuitos integrados diseñados con base
+        en la arquitectura de un procesador (en algunos casos, diseñados
+        como parte integral de esa arquitectura), permitiendo que ese tipo de
+        procesadores funcionen en una placa base. Sirven de puente de
+        comunicación con el resto de componentes de la placa, como son la
+        memoria, las tarjetas de expansión, los puertos USB, ratón, teclado,
+        etc.
+      </p>
+      <p class="py-1 has-text-justified">
+        Las placas base modernas suelen incluir dos integrados,
+        denominados puente norte y puente sur, y suelen ser los circuitos
+        integrados más grandes después de la GPU y el microprocesador.
+        Las últimas placa base carecen de puente norte, ya que los
+        procesadores de última generación lo llevan integrado.
+      </p>
+
+
+      <h5 class="subtitle is-5 has-text-left">
+        Historia
+      </h5>
+      <p class="has-text-justified py-1">
+        Desde los comienzos de la historia la fabricación de los primeros
+        microprocesadores, se pensó en un conjunto de integrados de
+        soporte, de hecho, el primer microprocesador de la historia, el Intel
+        4004 formaba parte de un conjunto de integrados numerados 4001,
+        4002 y 4003 que tenían todos una apariencia física similar y que
+        formaban la base de un sistema de cómputo cualquiera.
+      </p>
+      <p class="has-text-justified py-1">
+        Mientras que otras plataformas usaban muy variadas combinaciones
+        de chips de propósito general, los empleados en el Commodore 64 y
+        la Familia Atari de 8 bits, incluso sus CPUs, solían ser diseños
+        especializados para la plataforma, que no se encontraban en otros
+        equipos electrónicos, por lo que se les comenzó a llamar chipsets.
+      </p>
+      <p class="has-text-justified py-1">
+        Este término se generalizó en la siguiente generación de
+        computadores domésticos: el Commodore Amiga y el Atari ST son
+        los equipos más potentes de los años 1990, y ambos tenían multitud
+        de chips auxiliares que se encargaban del manejo de la memoria, el
+        sonido, los gráficos o el control de unidades de almacenamiento
+        masivo dejando a la CPU libre para otras tareas. En el Amiga sobre
+        todo se diferenciaban las generaciones por el chipset utilizado en
+        cada una.
+      </p>
+      <h5 class="subtitle is-5 has-text-left">
+        Funcionamiento
+      </h5>
+      <p class="has-text-justified py-1">
+        El chipset es el que hace posible que la placa base funcione como
+        eje del sistema, dando soporte a varios componentes e
+        interconectándolos de forma que se comuniquen entre ellos haciendo
+        uso de diversos buses. Es uno de los pocos elementos que tiene
+        conexión directa con el procesador, gestiona la mayor parte de la
+        información que entra y sale por el bus principal del procesador, del
+        sistema de vídeo y muchas veces de la memoria RAM.
+      </p>
+      <p class="has-text-justified py-1">
+        En el caso de los computadores PC, es un esquema de arquitectura
+        abierta que establece modularidad: el chipset debe tener interfaces
+        estándar para los demás dispositivos. Esto permite escoger entre
+        varios dispositivos estándar, por ejemplo, en el caso de los buses de
+        expansión, algunas tarjetas madre pueden tener bus PCI-Express y
+        soportar diversos tipos de tarjetas de distintos anchos de bus (1x, 8x,
+        16x).
+      </p>
+      <p class="has-text-justified py-1">
+        La terminología de los integrados ha cambiado desde que se creó el
+        concepto del chip-set a principio de los años 1990, pero todavía
+        existe equivalencia haciendo algunas aclaraciones:
+      </p>
+      <p class="has-text-justified py-1">
+        <strong>Puente norte:</strong> northbridge, MCH (memory controller hub) o
+        GMCH (graphic MCH), se usa como puente de enlace entre el
+        microprocesador y la memoria. Controla las funciones de acceso
+        hacia y entre el microprocesador, la memoria RAM, el puerto
+        gráfico AGP o el PCI-Express de gráficos, y las comunicaciones con
+        el puente sur. Al principio tenía también el control de PCI, pero esa
+        funcionalidad ha pasado al puente sur.
+      </p>
+      <p class="has-text-justified py-1">
+        <strong>Puente sur:</strong> southbridge o ICH (input controller hub), controla los
+        dispositivos asociados como son la controladora de discos IDE,
+        puertos USB, FireWire, SATA, RAID, ranuras PCI, ranura AMR,
+        ranura CNR, puertos infrarrojos, disquetera, LAN, PCI-Express 1x y
+        una larga lista de todos los elementos que podamos imaginar
+        integrados en la placa madre. Es el encargado de comunicar el
+        procesador con el resto de los periféricos.
+      </p>
+      <h5 class="subtitle is-5 has-text-left">
+        3.1.1 Unidad Central de Procesamiento (CPU).
+      </h5>
+      <p class="has-text-justified py-1">
+        La unidad central de procesamiento (siglas en inglés Central
+        Processing Unit) es el hardware dentro de una computadora u otros
+        dispositivos programables. Su trabajo es interpretar las instrucciones
+        de un programa informático mediante la realización de las
+        operaciones básicas aritméticas, lógicas y externas (provenientes de
+        la unidad de entrada/salida). Su diseño y avance ha variado
+        notablemente desde su creación, aumentando su eficiencia y
+        potencia, y reduciendo aspectos como el consumo de energía y el
+        costo.
+      </p>
+      <p class="has-text-justified py-1">
+        Una computadora puede contener más de una CPU
+        (multiprocesamiento). En la actualidad, los microprocesadores están
+        constituidos por un único circuito integrado (chip) aunque existen
+        los procesadores multinúcleo (varias CPU en un solo circuito
+        integrado). Un circuito integrado que contiene una CPU también
+        puede contener los dispositivos periféricos, y otros componentes de
+        un sistema informático; similar a un microcontrolador (menos
+        potente en RAM) se le denomina sistema en un chip (SoC).
+      </p>
+      <p class="has-text-justified py-1">
+        Los componentes de la CPU son:
+      </p>
+      <p class="has-text-justified py-1">
+        <strong>Unidad aritmético lógica (ALU):</strong> realiza operaciones
+        aritméticas y lógicas.
+      </p>
+      <p class="has-text-justified py-1">
+        <strong>Unidad de control (CU): </strong>dirige el tráfico de información
+        entre los registros de la CPU y conecta con la ALU las
+        instrucciones extraídas de la memoria.
+      </p>
+      <p class="has-text-justified py-1">
+        <strong>Registros internos:</strong> no accesibles (de instrucción, de bus de
+        datos y bus de dirección) y accesibles de uso específico
+        (contador programa, puntero pila, acumulador, flags, etc.) o de
+        uso general.
+      </p>
+      <h5 class="subtitle is-5 has-text-left">
+        3.1.2 Controlador del Bus
+      </h5>
+      <p class="has-text-justified py-1">
+        El controlador del bus se encarga de la frecuencia de funcionamiento
+        y las señales de sincronismo, temporización y control. Está ubicado
+        en un chip en la placa base.</p>
+      <p class="has-text-justified py-1">
+        El bus es la vía a través de la que se van a transmitir y recibir todas
+        las comunicaciones, tanto internas como externas, del sistema
+        informático. El bus es solamente un dispositivo de transferencia de
+        información entre los componentes conectados a él, no almacena
+        información alguna en ningún momento. Los datos, en forma de
+        señal eléctrica, sólo permanecen en el bus el tiempo que necesitan en
+        recorrer la distancia entre los dos componentes implicados en la
+        transferencia.
+      </p>
+
+      <h5 class="subtitle is-5 has-text-left">
+        3.1.3 Puerdas de Entrada - Salida E/S
+      </h5>
+      <p class="has-text-justified py-1">
+        Un puerto de E/S es un enchufe en una computadora al que se
+        conecta un cable. El puerto conecta la CPU a un dispositivo
+        periférico a través de una interfaz de hardware o a la red a través de
+        una interfaz de red.
+      </p>
+
+    </div>
+
+  </section>
+
+  <footer class="footer has-background-dark py-6">
+    <div class="has-text-centered">
+      <p class="has-text-white">
+        Sitio realizado por <strong class="has-text-white">Josué David Hernández González</strong>
+      </p>
+    </div>
+  </footer>
+  <script src="index.js"></script>
+</body>
+
 </html>
