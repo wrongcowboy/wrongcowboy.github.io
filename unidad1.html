@@ -85,12 +85,13 @@
     </nav>
   </section>
 
-  <section class="is-medium">
+  <section class="is-large">
 
     <div class="container has-shadow has-text-centered py-1">
       <h3 class="title is-3">Unidad 1. Arquitectura de Cómputo</h3>
-      <h5 class="subtitle is-5 has-text-left">1.1 Modelos de arquitecturas de cómputo</h5>
-      <p class="has has-text-justified">Arquitectura de computadoras. Es el diseño y la
+      <h5 class="subtitle is-5 has-text-left"><strong>1.1 Modelos de arquitecturas de cómputo</strong></h5>
+      <p class="has has-text-justified">
+        Arquitectura de computadoras. Es el diseño y la
         organización de un sistema para un equipo de cómputo.
         Es un modelo y descripción de cada función, así como los
         requerimientos y las implementaciones de diseño para varias
@@ -120,7 +121,7 @@
 
 
       <h5 class="subtitle is-5 has-text-left">
-        1.1.1 Clásicas
+        <strong>1.1.1 Clásicas</strong>
       </h5>
       <p class="has-text-justified py-2">
         Estas arquitecturas se desarrollaron en las primeras
@@ -220,7 +221,7 @@
         Además, al ser los buses independientes, el CPU puede
         acceder a los datos para completar la ejecución de una
         instrucción, y al mismo tiempo leer la siguiente instrucción a
-        ejecutar. </p>  
+        ejecutar. </p>
       <h5 class="subtitle is-5 has-text-left">
         Modelo Harvard
       </h5>
@@ -242,7 +243,7 @@
         realizar al mismo tiempo) y por lo tanto, el desempeño de la
         computadora. </p>
       <h5 class="subtitle is-5 has-text-left">
-        1.1.2 Segmentadas
+        <strong>1.1.2 Segmentadas</strong>
       </h5>
       <p class="has-text-justified py-2">
         Es una de las tecnologías utilizadas para realizar la
@@ -324,8 +325,214 @@
         a algunas técnicas de aumento de velocidad, no es visible al
         programador.
       </p>
-    </div>
+      <p class="has-text-justified py-1">
+        <strong>Tipos de cauces:</strong>
+      </p>
+      <p class="has-text-justified py-1">
+        <strong>Unifunción:</strong> ejecutan un único proceso.
+      </p>
+      <p class="has-text-justified py-1">
+        <strong>Multifunción:</strong> pueden ejecutar varios procesos:
+      </p>
+      <ol class="has-text-justified py-1">
+        <li><strong>Estáticos:</strong> en un instante determinado sólo pueden ejecutar
+          uno.</li>
+        <li><strong>Dinámicos:</strong> pueden ejecutar simultáneamente varios
+          procesos.</li>
+        <li><strong>Lineal:</strong> a cada etapa sólo le puede seguir otra etapa concreta.</li>
+        <li><strong>No lineal:</strong> se pueden establecer recorridos complejos de
+          las etapas.</li>
+      </ol>
+      <p class="has-text-justified py-1">
+        Ciclos de Instrucción.
+      </p>
+      <p class="has-text-justified py-1">
+        Ejecución de instrucciones en 5 ciclos.
+      </p>
+      <p class="has-text-justified py-1">
+        Etapas de cauce.
+      </p>
+      <p class="has-text-justified py-1">
+        Donde:
+      <p class="has-text-justified py-1">
+        <strong>IF:</strong> Búsqueda de una instrucción de la memoria.
+      </p>
+      <p class="has-text-justified py-1">
+        <strong>ID:</strong> Búsqueda de registros y decodificación de instrucciones.
+      </p>
+      <p class="has-text-justified py-1">
+        <strong>EXE:</strong> Ejecución o cálculo de dirección.
+      </p>
+      <p class="has-text-justified py-1">
+        <strong>MEM:</strong> Acceso a la memoria de datos.
+      </p>
+      <p class="has-text-justified py-1">
+        <strong>WB:</strong> Escribir datos en el archivo de registros.
+      <p class="has-text-justified py-1">
+        La segmentación ayuda en la realización de una carga de
+        trabajo.
+      </p>
+      <p class="has-text-justified py-1">
+        Realiza múltiples tareas simultáneamente utilizando
+        diferentes recursos.
+      </p>
+      <p class="has-text-justified py-1">
+        La velocidad se incrementa si se aumenta el número de
+        segmentos.
+      </p>
+      <p class="has-text-justified py-1">
+        La razón de segmentación está dada por el segmento más
+        lento.
+      </p>
+      <p class="has-text-justified py-1">
+        El tiempo en llenar y vaciar los segmentos reduce la
+        velocidad.
+      </p>
+      <p class="has-text-justified py-1">
+        Dedica unidades específicas del procesador a cada una de las
+        partes del ciclo de instrucción y ejecutarlas paralelamente.
+      </p>
+      <p class="has-text-justified py-1">
+        Mejora dramáticamente el rendimiento debido a que en los
+        procesadores tienen etapas en el ciclo de instrucción.
+      </p>
+      <p class="has-text-justified py-1">
+        La unidad de control se subdivide en dos o más unidades
+        funcionales, cada una encargada de llevar a cabo una parte
+        del ciclo de instrucción.
+      </p>
+      <p class="has-text-justified py-1">
+        Se comunican a través de una cola de instrucciones
+        (Pipeline).
+      </p>
+      <h5 class="subtitle is-5 has-text-left">
+        <strong>1.1.3 Multiprocesamiento</strong>
+      </h5>
+      <p class="has-text-justified py-1">
+        Se denomina multiprocesador a un computador que cuenta
+        con dos o más microprocesadores (CPUs).
+      </p>
+      <p class="has-text-justified py-1">
+        El multiprocesador puede ejecutar simultáneamente varios
+        hilos pertenecientes a un mismo proceso o bien a procesos
+        diferentes.
+      </p>
+      <p class="has-text-justified py-1">
+        La arquitectura NUMA, donde cada procesador tiene acceso
+        y control exclusivo a una parte de la memoria.
+      </p>
+      <p class="has-text-justified py-1">
+        La arquitectura SMP, donde todos los procesadores
+        comparten toda la memoria.
+      </p>
+      <p class="has-text-justified py-1">
+        Para que un multiprocesador opere correctamente necesita
+        un sistema operativo especialmente diseñado para ello.
+      </p>
+      <p class="has-text-justified py-1">
+        La mayoría de los sistemas operativos actuales poseen esta
+        capacidad.
+      </p>
+      <p class="has-text-justified py-1">
+        Cuando se desea incrementar el desempeño más de lo que
+        permite la técnica de segmentación (pipeline), se requiere
+        utilizar más de un procesador para la ejecución del programa
+        de aplicación.
+      </p>
+      <p class="has-text-justified py-1">
+        Los CPU de multiprocesamiento según Flynn se clasifican
+        de la siguiente manera:
+      </p>
+      <p class="has-text-justified py-1">
+        SISO - (Single Instruction, Single Operand) computadoras
+        Monoprocesador
+      </p>
+      <p class="has-text-justified py-1">
+        SIMO - (Single Instruction, Multiple Operand) procesadores
+        vectoriales, Exenciones MMX
+      </p>
+      <p class="has-text-justified py-1">
+        MISO - (Multiple Instruction, Single Operand) No
+        implementado
+      </p>
+      <p class="has-text-justified py-1">
+        MIMO - (Multiple Instruction, Multiple Operand) sistemas
+        SMP, Clusters, GPUs
+      </p>
+      <p class="has-text-justified py-1">
+        Los procesadores vectoriales, son computadoras pensadas
+        para aplicar un mismo algoritmo numérico a una serie de
+        datos matriciales, en especial en la simulación de sistemas
+        físicos complejos, tales como simuladores de clima,
+        explosiones atómicas, reacciones químicas, etc.
+      </p>
+      <p class="has-text-justified py-1">
+        Donde los datos son representados como grandes números de
+        datos en forma matricial sobre los que se deben se aplicar el
+        mismo algoritmo numérico.
+      </p>
+      <p class="has-text-justified py-1">
+        La mayoría de los procesadores modernos incluye algunas
+        instrucciones de tipo vectorial, tales como las extensiones al
+        conjunto de instrucciones tales como MMX y SSE. Estas
+        instrucciones les permiten procesar flujos multimedia más
+        eficientemente.
+      </p>
+      <p class="has-text-justified py-1">
+        Los Procesadores Digitales de Señales (DSP), son
+        procesadores especializados en el procesamiento de señales
+        tales como audio, vídeo, radar, sonar, radio, etc.
+      </p>
+      <p class="has-text-justified py-1">
+        Cuentan con instrucciones tipo vectorial que los hace muy
+        aptos para dicha aplicación. Suelen utilizarse en conjunto
+        con un microcontrolador en dispositivos como reproductores
+        de audio, reproductores de DVD y Blueray, teléfonos
+        celulares, sistemas de entretenimiento, sistemas de
+        adquisición de datos, instrumentos médicos, controles
+        industriales, etc.
+      </p>
+      <p class="has-text-justified py-1">
+        En los sistemas SMP (Simetric Multiprocessing), varios
+        procesadores comparten la misma memoria principal y
+        periféricos de Entrada /Salida, normalmente conectados por
+        un bus común.
+      </p>
+      <p class="has-text-justified py-1">
+        Se conocen como simétricos, ya que ningún procesador toma
+        el papel de maestro y los demás de esclavos, sino que todos
+        tienen derechos similares en cuanto al acceso a la memoria y
+        periféricos y ambos son administrados por el sistema
+        operativo.
+      </p>
+      <p class="has-text-justified py-1">
+        Pueden formarse con varios núcleos en un solo circuito
+        integrado o con varios circuitos integrados en una misma
+        tarjeta madre. La primera opción ha sido popularizada al
+        hacerse más económicos los procesadores multinúcleo de los
+        principales fabricantes y con su uso en sistemas de gama
+        media y baja, e inclusive en teléfonos celulares y tabletas.
+      </p>
+      <p class="has-text-justified py-1">
+        La segunda opción fue la que se uso en un principio y sigue
+        siendo usada en en estaciones de trabajo y en servidores de
+        alto rendimiento debido a que incrementa el poder
+        computacional del sistema, pero también incrementa
+        considerablemente el costo del sistema.
+      </p>
+      <p class="has-text-justified py-1">
 
+      </p>
+      <p class="has-text-justified py-1">
+
+      </p>
+      <p class="has-text-justified py-1">
+
+      </p>
+      <p class="has-text-justified py-1">
+
+      </p>
+    </div>
   </section>
 
   <footer class="footer has-background-dark py-6">
