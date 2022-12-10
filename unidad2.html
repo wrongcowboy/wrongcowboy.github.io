@@ -153,7 +153,7 @@
         área de memoria para direccionamiento conocida como segmento actual.
       </p>
       <p class="py-1">
-      <ul>
+      <ul class="has-text-justified py-1"">
         <li>Registro Cs: el dos almacena la dirección inicial del segmento de código de un
           programa en el registro CS. Indica la dirección de una instrucción que es buscada
           para su ejecución.</li>
@@ -166,159 +166,249 @@
           utiliza para el manejo de direccionamiento de memoria.</li>
       </ul>
       </p>
-      <p class="has-text-justified py-2">
+      <p class=" has-text-justified py-2">
         <strong>Registros de propósito general: </strong> Los registros de propósito general son el AX, BX, CX, y
         DX, de 16 bits. Cada uno de ellos se divide en dos registros de 8 bits, llamados AH y AL,
         BH y BL, CH y CL, y, DH y DL, H significando High (alto) y L significando Low (bajo),
         indicando la parte alta o la parte baja del registro correspondiente de 16 bits.
-      </p>
-      <p class="has-text-justified py-2">
-        Registro AX: El registro AX es el registro acumulador, es utilizado para
-        operaciones que implican entrada/salida, y multiplicación y división (estas dos
-        últimas en conjunto con el registro DX). </p>
-      <p class="has-text-justified py-1">
-        • Registro BX: El registro BX es el registro base, y es el único registro de propósito
-        general que puede ser un índice para direccionamiento indexado.</p>
-      <p class="has-text-justified py-1">
-        • Registro CX: El registro CX es conocido como el registro contador. Puede
-        contener un valor para controlar el número de veces que un ciclo se repite o un
-        valor para corrimiento de bits.</p>
-      <p class="has-text-justified py-1">
-        • Registro DX: El registro DX es el registro de datos. En algunas operaciones se
-        indica mediante este registro el número de puerto de entrada/salida, y en las
-        operaciones de multiplicación y división de 16 bits se utiliza junto con el
-        acumulador AX. </p>
-      <p class="has-text-justified py-2">
-        <strong>Registros de apuntadores: </strong> Los registros SP (apuntador de pila) y BP (apuntador base)
-        están asociados con el registro SS y permiten al sistema acceder a datos en el segmento
-        de la pila.
-      </p>
-      <p class="has-text-justified py-1">
-        • Registro SP: El apuntador de pila de 16 bits está asociado con el segmento SS y
-        proporciona un valor de desplazamiento que se refiere a la palabra actual que está
-        siendo procesada en la pila.
-      </p>
-      <p class="has-text-justified py-1">
-        • Registro BP: El apuntador base de 16 bits facilita la referencia de parámetros
-        dentro de la pila.
-      </p>
-      <p class="has-text-justified py-2">
-        <strong>Registros de banderas: </strong> Es un registro de 16 bits, de los cuales nueve sirven para indicar
-        el estado actual de la máquina y el resultado del procesamiento.
-        de la pila.
-      </p>
-      <div class="block has-text-justified">
-        La tabla contiene 16 posiciones (de 0 a 15), que son los 16 bits del registro de banderas,
-        numeradas de derecha a izquierda. La posición 0 la encontraremos a la derecha y la
-        posición 15 a la izquierda.</div>
-      <div class="has-text-justified">
-        Los bits de las banderas son las siguientes:
-      </div>
-
-
-      <h5 class="subtitle is-5 has-text-left">
-        Modelo Harvard
-      </h5>
-      <p class="has-text-justified py-2">
-        El tamaño de las instrucciones no está relacionado con el de
-        los datos, y por lo tanto puede ser optimizado para que
-        cualquier instrucción ocupe una sola posición de memoria de
-        programa, logrando así mayor velocidad y menor longitud de
-        programa.
-        El tiempo de acceso a las instrucciones puede superponerse
-        con el de los datos, logrando una mayor velocidad en cada
-        operación.
-        La principal desventaja de esta arquitectura; el bus de datos
-        y direcciones único se convierte en un cuello de botella por
-        el cual debe pasar toda la información que se lee de o se
-        escribe a la memoria, obligando a que todos los accesos a
-        esta sean secuenciales.
-        Limita el grado de paralelismo (acciones que se pueden
-        realizar al mismo tiempo) y por lo tanto, el desempeño de la
-        computadora. </p>
-      <h5 class="subtitle is-5 has-text-left">
-        1.1.2 Segmentadas
-      </h5>
-      <p class="has-text-justified py-2">
-        Es una de las tecnologías utilizadas para realizar la
-        segmentación o paralelismo. Divide el procesador, en etapas,
-        procesa una instrucción diferente en cada una y trabaja con
-        varias a la vez.
-      <p class="has-text-justified py-1">
-        Pueden trabajar de forma paralela, en diferentes
-        instrucciones, utilizando una cola de instrucciones para su
-        comunicación, denominado entubamiento.</p>
-      <p class="has-text-justified py-1">
-        La dependencia de datos y de control, que tiene como efecto
-        la disminución del rendimiento del pipelining.
-        La segmentación de cauce (pipelining) es una forma efectiva
-        de organizar el hardware del CPU para realizar más de una
-        operación al mismo tiempo.</p>
-      <p class="has-text-justified py-1">
-        Consiste en descomponer el proceso de ejecución de las
-        instrucciones en fases o etapas que permitan una ejecución
-        simultánea.</p>
-      <p class="has-text-justified py-1">
-        Explota el paralelismo entre las instrucciones de un flujo
-        secuencial.</p>
-      <p class="has-text-justified py-1">
-        La segmentación es una técnica de implementación por la
-        cual se solapa la ejecución de múltiples instrucciones.
-        La técnica de implementación clave utilizada para hacer
-        CPU rápidas.</p>
-      <p class="has-text-justified py-1">
-        La segmentación es como una línea de ensamblaje: cada
-        etapa de la segmentación completa una parte de la
-        instrucción.</p>
-      <p class="has-text-justified py-1">
-        Como en una línea de ensamblaje, la acción a realizar en una
-        instrucción se descompone en partes más pequeñas, cada una
-        de las cuales necesita una fracción del tiempo necesario para
-        completar la instrucción completa.
-        Cada uno de estos pasos se define como etapa de la
-        segmentación o segmento.</p>
-      <p class="has-text-justified py-1">
-        Las etapas están conectadas, cada una a la siguiente, para
-        formar una especie de cauce las instrucciones se entran por
-        un extremo, son procesadas a través de las etapas y salen por
-        el otro.</p>
-      <p class="has-text-justified py-1">
-        La productividad de la segmentación está determinada por la
-        frecuencia con que una instrucción salga del cauce.
-        Como las etapas están conectadas entre sí, todas las etapas
-        deben estar listas para proceder al mismo tiempo. El tiempo
-        requerido para desplazar una instrucción, un paso, a lo largo
-        del cauce es un ciclo máquina.</p>
-      <p class="has-text-justified py-1">
-        La duración de un ciclo máquina está determinada por el
-        tiempo que necesita la etapa más lenta (porque todas las
-        etapas progresan a la vez).</p>
-      <p class="has-text-justified py-1">
-        Con frecuencia, el ciclo máquina es un ciclo de reloj (a veces
-        dos, o raramente más), aunque el reloj puede tener múltiples
-        fases.</p>
-      <p class="has-text-justified py-1">
-        La mejora de velocidad debida a la segmentación es igual al
-        número de etapas.</p>
-      <p class="has-text-justified py-1">
-        La segmentación consigue una reducción en el tiempo de
-        ejecución medio por instrucción.
-        Esta reducción se puede obtener decrementando la duración
-        del ciclo de reloj de la máquina segmentada o disminuyendo
-        el número de ciclos de reloj por instrucción, o haciendo
-        ambas cosas.</p>
-      <p class="has-text-justified py-1">
-        El mayor impacto está en el número de ciclos de reloj por
-        instrucción, aunque el ciclo de reloj es, con frecuencia, más
-        corto en una máquina segmentada (especialmente en
-        supercomputadores segmentados).</p>
-      <p class="has-text-justified py-1">
-        La segmentación es una técnica de implementación, que
-        explota el paralelismo entre las instrucciones de un flujo
-        secuencial. Tiene la ventaja sustancial que, de forma distinta
-        a algunas técnicas de aumento de velocidad, no es visible al
-        programador.
-      </p>
+        </p>
+        <p class="has-text-justified py-2">
+          Registro AX: El registro AX es el registro acumulador, es utilizado para
+          operaciones que implican entrada/salida, y multiplicación y división (estas dos
+          últimas en conjunto con el registro DX). </p>
+        <p class="has-text-justified py-1">
+          • Registro BX: El registro BX es el registro base, y es el único registro de propósito
+          general que puede ser un índice para direccionamiento indexado.</p>
+        <p class="has-text-justified py-1">
+          • Registro CX: El registro CX es conocido como el registro contador. Puede
+          contener un valor para controlar el número de veces que un ciclo se repite o un
+          valor para corrimiento de bits.</p>
+        <p class="has-text-justified py-1">
+          • Registro DX: El registro DX es el registro de datos. En algunas operaciones se
+          indica mediante este registro el número de puerto de entrada/salida, y en las
+          operaciones de multiplicación y división de 16 bits se utiliza junto con el
+          acumulador AX. </p>
+        <p class="has-text-justified py-2">
+          <strong>Registros de apuntadores: </strong> Los registros SP (apuntador de pila) y BP (apuntador base)
+          están asociados con el registro SS y permiten al sistema acceder a datos en el segmento
+          de la pila.
+        </p>
+        <p class="has-text-justified py-1">
+          • Registro SP: El apuntador de pila de 16 bits está asociado con el segmento SS y
+          proporciona un valor de desplazamiento que se refiere a la palabra actual que está
+          siendo procesada en la pila.
+        </p>
+        <p class="has-text-justified py-1">
+          • Registro BP: El apuntador base de 16 bits facilita la referencia de parámetros
+          dentro de la pila.
+        </p>
+        <p class="has-text-justified py-2">
+          <strong>Registros de banderas: </strong> Es un registro de 16 bits, de los cuales nueve sirven para indicar
+          el estado actual de la máquina y el resultado del procesamiento.
+          de la pila.
+        </p>
+        <div class="block has-text-justified">
+          La tabla contiene 16 posiciones (de 0 a 15), que son los 16 bits del registro de banderas,
+          numeradas de derecha a izquierda. La posición 0 la encontraremos a la derecha y la
+          posición 15 a la izquierda.</div>
+        <div class="has-text-justified">
+          Los bits de las banderas son las siguientes:
+        </div>
+        <ol class="has-text-justified py-1">
+          <li><strong>OF (overflow, desbordamiento):</strong> Indica desbordamiento del bit de mayor orden
+            después de una operación aritmética de números con signo (1=existe overflow;
+            0=no existe overflow). Para operaciones sin signo, no se toma en cuenta esta
+            bandera.
+          </li>
+          <li>
+            <strong>DF (dirección):</strong> Controla la selección de incremento o decremento de los registros
+            SI y DI en las operaciones con cadenas de caracteres (1=decremento automático;
+            0=incremento). La bandera DF se controla con las instrucciones STD y CLD.
+          </li>
+          <li>
+            <strong>IF (interrupción):</strong> Controla el disparo de las interrupciones (1=habilita las
+            interrupciones; 0=deshabilita las interrupciones). La interrupción no enmascarable
+            es la única que no puede ser bloqueada por esta bandera. El estado de la bandera
+            IF se controla con las instrucciones STI y CLI.
+          </li>
+          <li>
+            <strong>TF (trampa):</strong> Permite la operación del procesador en modo de depuración (paso a
+            paso).
+          </li>
+          <li>
+            <strong>SF (signo):</strong> Contiene el signo resultante de una operación aritmética (0=positivo;
+            1=negativo).
+          </li>
+          <li>
+            <strong>ZF (cero):</strong> Indica el resultado de una operación aritmética o de comparación
+            (0=resultado diferente de cero; 1=resultado igual a cero).
+          </li>
+          <li>
+            <strong>AF (acarreo auxiliar):</strong> Contiene el acarreo del bit 3. Esta bandera se prueba con las
+            instrucciones DAA y DAS para ajustar el valor de AL después de una suma o resta
+            BCD.
+          </li>
+          <li>
+            <strong>PF (paridad):</strong> Indica si el número de bits 1, del byte menos significativos de una
+            operación, es par (0=número de bits 1 es impar; 1=número de bits 1 es par).
+          </li>
+          <li>
+            <strong>CF (acarreo):</strong> Contiene el acarreo del bit de mayor orden después de una
+            operación aritmética; también almacena el contenido del último bit en una
+            operación de desplazamiento o de rotación.
+          </li>
+        </ol>
+        <p class="has-text-justified py-1">
+          <strong>Registro de punteros de instrucción:</strong>
+          El registro IP de 16 bits contiene el
+          desplazamiento de dirección de la siguiente instrucción que se ejecuta. El IP está
+          asociado con el registro CS en el sentido de que el IP indica la instrucción actual dentro
+          del segmento de código que se está ejecutando actualmente en la memoria.
+        </p>
+        <h5 class="subtitle is-5 has-text-left">
+          <strong>2.2.1 Registros visibles para el usuario</strong>
+        </h5>
+        <p class="has-text-justified py-1">
+          Un registro visible para el usuario es aquel que pueden referenciarse por medio del
+          lenguaje que la CPU ejecuta. Se puede caracterizar en las siguientes categorías.
+        </p>
+        <ul class="has-text-justified py-1">
+          <strong>Propósito general:</strong>
+          <li>Son utilizados por el programador para diversas funciones.</li>
+          <strong>Datos:</strong>
+          <li>Pueden utilizarse únicamente para contener datos y no se pueden emplear el cálculo de
+            la dirección de un operando.</li>
+        </ul>
+        <h5 class="subtitle is-5 has-text-left">
+          <strong>2.3 Ciclo de instrucción</strong>
+        </h5>
+        <p class="has-text-justified py-1">
+          Un ciclo de instrucción (también llamado ciclo de fetch-and-execute o ciclo de
+          fetchdecode-execute en inglés) es el período que tarda la unidad central de proceso
+          (CPU) en ejecutar una instrucción de lenguaje máquina.
+        </p>
+        <ul class="has-text-justified py-1">
+          <strong>Búsqueda:</strong>
+          <li>Extrae las direcciones de memoria del contador del programa.</li>
+          <strong>Ejecución:</strong>
+          <li>Simplemente ejecuta la acción ya que en esta parte el procesador ya sabe de que
+            instrucción se trata</li>
+          <strong>Decodificación:</strong>
+          <li>Decodifica el mensaje en un lenguaje que la computadora pueda entender</li>
+          <strong>Finalización: </strong>
+          <li>Se almacena el resultado en la memoria o en un dispositivo de salida.</li>
+        </ul>
+        <h5 class="subtitle is-5 has-text-left">
+          <strong>2.3 Segmentación de instrucciones</strong>
+        </h5>
+        <p class="has-text-justified py-1">
+          Es una técnica que permite implementar el paralelismo a nivel de instrucción en un único
+          procesador, esta arquitectura es usada en arquitecturas vectoriales.
+        </p>
+        <ul class="has-text-justified py-1">
+          <li><strong>Li:</strong> lectura de instrucción.</li>
+          <li><strong>Di:</strong> decodificador de instrucción.</li>
+          <li><strong>Ej:</strong> ejecución.</li>
+          <li><strong>Mem:</strong> acceso a memoria.</li>
+          <li><strong>Es:</strong> escritura de vuelta al registro.</li>
+        </ul>
+        <h5 class="subtitle is-5 has-text-left">
+          <strong>2.3.2 Ciclo FDE</strong>
+        </h5>
+        <p class="has-text-justified py-1">
+          <strong>Instrucción (Fetch):</strong>
+          Obtiene instrucciones del almacenamiento del programa.
+        </p>
+        <p class="has-text-justified py-1">
+          <strong>Decodificador de instrucción:</strong>
+          Determina las acciones requeridas.
+        </p>
+        <p class="has-text-justified py-1">
+          <strong>Operando (Fetch):</strong>
+          Localiza y obtiene los datos operandos.
+        </p>
+        <p class="has-text-justified py-1">
+          <strong>Ejectuar:</strong>
+          Computa los valores resultado o status.
+        </p>
+        <p class="has-text-justified py-1">
+          <strong>Almacén de resultados:</strong>
+          Deposita los resultados en el almacén para un uso posterior.
+        </p>
+        <p class="has-text-justified py-1">
+          <strong>Instrucción siguiente:</strong>
+          Determina la instrucción sucesora.
+        </p>
+        <h5 class="subtitle is-5 has-text-left">
+          <strong>2.3.4 Modos de direccionamiento</strong>
+        </h5>
+        <p class="has-text-justified py-1">
+          Contar con diferentes formatos de instrucciones, implica contar con las diferentes
+          formas de obtener los operandos de las instrucciones. Dichas formas de se les denomina
+          modos de direccionamiento.
+        </p>
+        <p class="has-text-justified py-1">
+          <strong>direccionamiento por registro:</strong> Los operandos son registros, los datos a operar están en dos
+          registros de 32 bytes cada
+          uno, dichos datos se suman y el resultado será otro registro del mismo tamaño
+        </p>
+        <p class="has-text-justified py-1">
+          <strong>Direccionamiento base o desplazamiento:</strong>
+          Donde uno de los operandos está en una localidad de memoria cuya dirección es la suma
+          de un registro y una constante que forma parte de la misma instrucción.
+          Ejemplos de instrucciones que usan este modo de direccionamiento: lw, sw, etc.
+        </p>
+        <p class="has-text-justified py-1">
+          <strong>Direccionamiento inmediato:</strong>
+          Donde uno de los operandos es una constante que está en la misma instrucción.
+          Ejemplos de instrucciones que usan este modo de direccionamiento: addi, slti, etc.
+        </p>
+        <p class="has-text-justified py-1">
+          <strong>Direccionamiento relativo al PC:</strong>
+          Donde se forma una dirección sumando una constante, que está en la instrucción, con el
+          registro PC (Program Counter). El resultado de la suma corresponde a la dirección
+          destino si un brinco condicional se va a realizar.
+          Ejemplos de instrucciones que usan este modo de direccionamiento: beq y bne.
+        </p>
+        <p class="has-text-justified py-1">
+          <strong>Direccionamiento pseudo-directo:</strong>
+          Donde la dirección destino de un salto corresponde a la concatenación de 26 bits que
+          están en la misma instrucción con los bits más significativos del PC.
+          Ejemplos de instrucciones que usan este modo de direccionamiento: j y jal.
+        </p>
+        <h5 class="subtitle is-5 has-text-left">
+          <strong>2.4 Casos de estudio de PC</strong>
+        </h5>
+        <p class="has-text-justified py-1">
+          <strong>I-8086.</strong>
+        </p>
+        <p class="has-text-justified py-1">
+          Los modos de direccionamiento del 8086 (Crawford & Gelsinger, 1987) son muy
+          irregulares. Los registros del procesador, se usan para contener los datos con que se está
+          trabajando puesto que el acceso a los registros es mucho más rápido que los accesos a
+          memoria. Se pueden realizar operaciones aritméticas y lógicas, comparaciones, entre
+          otras.
+          Hay un campo para un registro (reg), que especifica uno de los operandos, y otros dos
+          campos (mod y r/m) para el otro.
+        </p>
+        <p class="has-text-justified py-1">
+          <strong>Motorola 68000</strong>
+        </p>
+        <p class="has-text-justified py-1">
+          En el Motorola 68000 el mismo direccionamiento lleva implícito el tipo de registro
+          sobre el que trabaja (direcciones o datos). Está basado en dos bancos de 8 registros de 32
+          bits. Un banco es de datos (Dn) y el otro de punteros (An). Además contiene un contador
+          de programa de 32 bits y un registro de estado de 16 bits. Los registros de datos (D0 a
+          D7) se pueden usar como registros de 32 bits (.l), 16 bits (.w) y 8 bits (.b). Cualquiera de
+          ellos puede usarse como acumulador, índice o puntero.
+        </p>
+        <p class="has-text-justified py-1">
+          <strong>Procesador I3</strong>
+        </p>
+        <p class="has-text-justified py-1">
+          Un modo de direccionamiento especifico la forma de calcular la dirección de memoria
+          efectiva de un operando usando información contenida en registros, constantes o una
+          instrucción de la maquina o en otra parte.
     </div>
 
   </section>
