@@ -90,7 +90,7 @@
     <div class="container has-shadow has-text-centered py-1">
       <h3 class="title is-3">Unidad 3 - Selección de componentes para ensamble de equipo
         de cómputo</h3>
-      <h5 class="subtitle is-5 has-text-left">3.1 Chip Set</h5>
+      <h5 class="subtitle is-5 has-text-left"><strong>3.1 Chip Set</strong></h5>
       <p class="py-1 has-text-justified">
         Un chipset es el conjunto de circuitos integrados diseñados con base
         en la arquitectura de un procesador (en algunos casos, diseñados
@@ -107,8 +107,6 @@
         Las últimas placa base carecen de puente norte, ya que los
         procesadores de última generación lo llevan integrado.
       </p>
-
-
       <h5 class="subtitle is-5 has-text-left">
         Historia
       </h5>
@@ -182,7 +180,7 @@
         procesador con el resto de los periféricos.
       </p>
       <h5 class="subtitle is-5 has-text-left">
-        3.1.1 Unidad Central de Procesamiento (CPU).
+        <strong>3.1.1 Unidad Central de Procesamiento (CPU)</strong>
       </h5>
       <p class="has-text-justified py-1">
         La unidad central de procesamiento (siglas en inglés Central
@@ -224,7 +222,7 @@
         uso general.
       </p>
       <h5 class="subtitle is-5 has-text-left">
-        3.1.2 Controlador del Bus
+        <strong>3.1.2 Controlador del Bus</strong>
       </h5>
       <p class="has-text-justified py-1">
         El controlador del bus se encarga de la frecuencia de funcionamiento
@@ -242,7 +240,7 @@
       </p>
 
       <h5 class="subtitle is-5 has-text-left">
-        3.1.3 Puerdas de Entrada - Salida E/S
+        <strong>3.1.3 Puerdas de Entrada - Salida E/S</strong>
       </h5>
       <p class="has-text-justified py-1">
         Un puerto de E/S es un enchufe en una computadora al que se
@@ -250,9 +248,350 @@
         periférico a través de una interfaz de hardware o a la red a través de
         una interfaz de red.
       </p>
-
+      <p class="has-text-justified py-1">
+        En otras palabras, un puerto de E/S es un punto de conexión que
+        actúa como interfaz entre la computadora y dispositivos externos
+        como mouse, impresora, módem, etc. Estos son de dos tipos:
+      </p>
+      <ol class="has-text-justified py-1">
+        <li><strong>Puerto interno:</strong>
+          conecta la placa base a dispositivos internos
+          como unidad de disco duro, unidad de CD, módem interno,
+          etc.
+        </li>
+        <li><strong>Puerto externo:</strong>
+          conecta la placa base a dispositivos externos
+          como módem, mouse, impresora, unidades flash, etc.
+        </li>
+      </ol>
+      <p class="has-text-justified py-1">
+        <strong>Puerto serial:</strong>
+        los puertos seriales transmiten datos secuencialmente
+        un bit a la vez. Por lo tanto, solo necesitan un cable para transmitir 8
+        bits. Sin embargo, también los hace más lentos. Los puertos serie
+        suelen ser conectores macho de 9 o 25 pines. También se conocen
+        como puertos COM (comunicación) o puertos RS323C.
+      </p>
+      <p class="has-text-justified py-1">
+        <strong>Puerto paralelo:</strong>
+        los puertos paralelos pueden enviar o recibir 8 bits
+        o 1 byte a la vez. Los puertos paralelos vienen en forma de pines
+        hembra de 25 pines y se utilizan para conectar impresoras,
+        escáneres, unidades de disco duro externas, etc.
+      </p>
+      <p class="has-text-justified py-1">
+        <strong>Puerto USB:</strong>
+        USB son las siglas de Universal Serial Bus. Es el
+        estándar de la industria para la conexión de datos digitales de corta
+        distancia. El puerto USB es un puerto estandarizado para conectar
+        una variedad de dispositivos como impresora, cámara, teclado,
+        altavoz, etc.
+      </p>
+      <p class="has-text-justified py-1">
+        <strong>Puerto PS/2:</strong>
+        PS/2 son las siglas de Personal System/2. Es un puerto
+        estándar hembra de 6 pines que se conecta al cable mini-DIN
+        macho. IBM introdujo PS/2 para conectar el mouse y el teclado a las
+        computadoras personales. Este puerto ahora está casi obsoleto,
+        aunque algunos sistemas compatibles con IBM pueden tener este
+        puerto.
+      </p>
+      <p class="has-text-justified py-1">
+        <strong>Puerto infrarrojos:</strong>
+        el puerto de infrarrojos es un puerto que
+        permite el intercambio inalámbrico de datos en un radio de 10 m.
+        Dos dispositivos que tienen puertos infrarrojos se colocan uno frente
+        al otro para que los haces de luces infrarrojas se puedan utilizar para
+        compartir datos.
+      </p>
+      <p class="has-text-justified py-1">
+        <strong>Puerto Bluetooth:</strong>
+        Bluetooth es una especificación de
+        telecomunicaciones que facilita la conexión inalámbrica entre
+        teléfonos, computadoras y otros dispositivos digitales a través de
+        una conexión inalámbrica de corto alcance. El puerto Bluetooth
+        permite la sincronización entre dispositivos habilitados para
+        Bluetooth.
+      </p>
+      <p class="has-text-justified py-1">
+        <strong>Puerto FireWire:</strong>
+        FireWire es el estándar de interfaz de Apple
+        Computer para permitir la comunicación de alta velocidad mediante
+        bus serie. También se llama IEEE 1394 y se usa principalmente para
+        dispositivos de audio y video como videocámaras digitales.
+      </p>
+      <h5 class="subtitle is-5 has-text-left">
+        <strong>3.1.4 Controlador de Interrupciones</strong>
+      </h5>
+      <p class="has-text-justified py-1">
+        El controlador de interrupciones es un módulo que tiene por función
+        gestionar las interrupciones de entrada/salida para el procesador.
+        Esto ahorra diseñar lógica y añadir patitas al procesador. También
+        proporciona flexibilidad porque permite idealmente, gestionar un
+        número ilimitado señales de interrupción (favoreciendo la expansión
+        del sistema de entrada/salida).
+      </p>
+      <p class="has-text-justified py-1">
+        El controlador recibe el conjunto de señales de interrupción
+        procedentes de los dispositivos, toma la decisión de cuál es la más
+        prioritaria, y envía una única señal al procesador. La respuesta del
+        procesador es transmitida al dispositivo y el propio controlador se
+        encarga de depositar en el bus el vector de la interrupción.
+      </p>
+      <p class="has-text-justified py-1">
+        En un sistema basado en la familia de procesadores 8086, esta labor
+        la realiza el chip 8259. Este chip admite hasta 8 señales de
+        interrupción, pero también admite ser configurado en cascada (sus
+        entradas proceden a su vez de otro controlador) de modo que un
+        conjunto de controladores 8259 pueden gestionar hasta un máximo
+        de 8 x 8 señales de interrupción procedentes de otros tantos
+        dispositivos de entrada/salida.
+      </p>
+      <p class="has-text-justified py-1">
+        <strong>Ciclo de reconocimiento de interrupción.</strong>
+      </p>
+      <ol class="has-text-justified py-1">
+        <li>
+          Tras la activación de una línea IR, el controlador activa la
+          salida INTR señalándole a la CPU la existencia de una
+          interrupción activada.
+        </li>
+        <li>
+          Al recibir la señal, el procesador da un pulso en su salida
+          INTA indicando que comienza un ciclo de reconocimiento de
+          interrupción.
+        </li>
+        <li>
+          Al recibir el controlador el pulso por su entrada INTA
+          comienza a arbitrar las interrupciones recibidas y selecciona la
+          más prioritaria.
+        </li>
+        <li>
+          Se emite un segundo pulso por la línea INTA del procesador (o
+          controlador de bus) que utiliza el controlador para depositar en
+          el bus el vector correspondiente a la interrupción de mayor
+          prioridad.
+        </li>
+        <li>
+          El procesador obtiene la dirección de la rutina de interrupción
+          a partir de este dato y salta a ella. Almacena el registro de flags
+          y la dirección de retorno, deshabilita las interrupciones y
+          comienza a ejecutar la rutina.
+        </li>
+      </ol>
+      <h5 class="subtitle is-5 has-text-left">
+        <strong>3.1.5 Controlador de Acceso Directo a Memoria (DMA)</strong>
+      </h5>
+      <p class="has-text-justified py-1">
+        El mecanismo de acceso directo a memoria está controlado por un
+        chip específico, el DMAC ("DMA Controller"), que permite realizar
+        estos intercambios sin apenas intervención del procesador. En los
+        XT estaba integrado en un chip 8237A que proporcionaba 4 canales
+        de 8 bits (puede mover solo 1 Byte cada vez); sus direcciones de
+        puerto son 000-00Fh. Posteriormente en los AT se instalaron dos de
+        estos integrados y las correspondientes líneas auxiliares en el bus de
+        control.
+      </p>
+      <p class="has-text-justified py-1">
+        En contra de lo que podría parecer, el resultado no fue disponer de 8
+        canales, porque el segundo controlador se colgó en “Cascada” de la
+        línea 4 del primero. Los canales del segundo DMAC está asignado a
+        las direcciones 0C0-0DFh y son de 16 bits.
+      </p>
+      <p class="has-text-justified py-1">
+        Pueden mover 2 Bytes (de posiciones contiguas) cada vez. Cada
+        canal tiene asignada una prioridad para el caso de recibirse
+        simultáneamente varias peticiones (los números más bajos tienen
+        prioridad más alta).
+      </p>
+      <p class="has-text-justified py-1">
+        Pueden ser utilizados por cualquier dispositivo que los necesite
+        (suponiendo naturalmente que esté diseñado para soportar este modo
+        de operación). Cada sistema los asigna de forma arbitraria, pero hay
+        algunos cuya asignación es estándar.
+      </p>
+      <h5 class="subtitle is-5 has-text-left">
+        <strong>3.1.6 Circuitos de temporización</strong>
+      </h5>
+      <p class="has-text-justified py-1">
+        El circuito electrónico que más se utiliza tanto en la industria como
+        en circuitería comercial, es el circuito temporizador o de retardo,
+        dentro de la categoría de temporizadores, cabe destacar el más
+        económico y también menos preciso consistente en una resistencia y
+        un condensador, a partir de aquí se puede contar con un sinfín de
+        opciones.
+      </p>
+      <p class="has-text-justified py-1">
+        Cuando necesitamos un temporizador, lo primero que debemos
+        considerar es la necesidad de precisión en el tiempo, base muy
+        importante para determinar los elementos que vamos a utilizar en su
+        concepción y diseño.
+      </p>
+      <p class="has-text-justified py-1">
+        Un temporizador básicamente consiste en un elemento que se activa
+        o desactiva después de un tiempo preestablecido. De esta manera
+        podemos determinar el parámetro relacionado con el tiempo que ha
+        de transcurrir para que el circuito susceptible de temporizarse, se
+        detenga o empiece a funcionar o simplemente cierre un contacto o lo
+        abra.
+      </p>
+      <p class="has-text-justified py-1">
+        Se encuentra en la placa base de la PC y que es capaz de mantener
+        una cuenta de tiempo basada en el reloj de la computadora. Puede
+        usarse para calcular el intervalo entre dos mediciones de tiempo o
+        para generar pausas. Este chip tiene la capacidad de realizar
+        diferentes funciones de conteo. Es útil para medir el tiempo que dura
+        cierto proceso o para mantener actualizadas la hora del día y la fecha
+        si se deja la PC conectada y encendida.
+      </p>
+      <h5 class="subtitle is-5 has-text-left">
+        <strong>3.1.7 Circuitos de Control</strong>
+      </h5>
+      <p class="has-text-justified py-1">
+        Es una red secuencial que acepta un código que define la operación
+        que se va a ejecutar y luego prosigue a través de una secuencia de
+        estados, generando una correspondiente secuencia de señales
+        control.
+      </p>
+      <p class="has-text-justified py-1">
+        Estas señales de control incluyen el control de lectura-escritura y
+        señales de dirección de memoria válida en el bus de control del
+        sistema. Otras señales generadas por el controlador se conectan a la
+        ALU y a los registros internos del procesador para regular el flujo de
+        información en el procesador y desde los buses de dirección y de
+        datos del sistema.
+      </p>
+      <h5 class="subtitle is-5 has-text-left">
+        <strong>3.1.8 Controladores de video</strong>
+      </h5>
+      <p class="has-text-justified py-1">
+        La tarjeta de video, (también llamada controlador de video), es un
+        componente electrónico requerido para generar una señal de video
+        que se manda a una pantalla de video por medio de un cable. La
+        tarjeta de video se encuentra normalmente en la placa de sistema de
+        la computadora o en una placa de expansión. La tarjeta gráfica reúne
+        toda la información que debe visualizarse en pantalla y actúa como
+        interfaz entre el procesador y el monitor; la información es enviada a
+        éste por la placa luego de haberla recibido a través del sistema de
+        buses.
+      </p>
+      <p class="has-text-justified py-1">
+        Una tarjeta gráfica se compone, básicamente, de un controlador de
+        video, de la memoria de pantalla o RAM video, y el generador de
+        caracteres, y en la actualidad también poseen un acelerador de
+        gráficos. El controlador de video va leyendo a intervalos la
+        información almacenada en la RAM video y la transfiere al monitor
+        en forma de señal de video; el número de veces por segundo que el
+        contenido de la RAM video es leído y transmitido al monitor en
+        forma de señal de video se conoce como frecuencia de refresco de la
+        pantalla.
+      </p>
+      <h5 class="subtitle is-5 has-text-left">
+        Tipos de placas de videos.
+      </h5>
+      <p class="has-text-justified py-1">
+        <strong>Adaptador de Pantalla Monocormo (MDA):</strong>
+        los primeros PC solo
+        visualizaban textos. El MDA contaba con 4KB de memoria de video
+        RAM que le permitía mostrar 25 líneas de 80 caracteres cada una
+        con una resolución de 14x9 puntos por carácter.
+      </p>
+      <p class="has-text-justified py-1">
+        <strong>Tarjeta gráfica Hércules:</strong>
+        con esta tarjeta se podía visualizar
+        gráficos y textos simultáneamente. En modo texto, soportaba una
+        resolución de 80x25 puntos. En tanto que en los gráficos lo hacía
+        con 720x350 puntos, dicha tarjeta servía sólo para gráficos de un
+        solo color. La tarjeta Hércules tenía una capacidad total de 64k de
+        memoria video RAM. Poseía una frecuencia de refresco de la
+        pantalla de 50HZ.
+      </p>
+      <p class="has-text-justified py-1">
+        <strong>Color Graphics Adapter (CGA):</strong>
+        la CGA utiliza el mismo chip que
+        la Hércules y aporta resoluciones y colores distintos. Los tres
+        colores primarios se combinan digitalmente formando un máximo de
+        ocho colores distintos. La resolución varía considerablemente según
+        el modo de gráficos que se esté utilizando.
+      </p>
+      <p class="has-text-justified py-1">
+        <strong>La tarjeta EGA:</strong>
+        Enchanced Graphics Adapter (EGA). Se trata de
+        una tarjeta gráfica superior a la CGA. En el modo texto ofrece una
+        resolución de 14x18 puntos y en el modo gráfico dos resoluciones
+        diferentes de 640x200 y 640x350 a 4 bits, lo que da como resultado
+        una paleta de 16 colores, siempre y cuando la tarjeta esté equipada
+        con 256KB de memoria de video RAM.
+      </p>
+      <p class="has-text-justified py-1">
+        <strong>La tarjeta VGA:</strong>
+        la Video Graphics Adapter (VGA) significó la
+        aparición de un nuevo estándar del mercado. Esta tarjeta ofrece una
+        paleta de 256 colores, dando como resultado imágenes de colores
+        mucho más vivos. Las primeras VGA contaban con 256KB de
+        memoria y solo podían alcanzar una resolución de 320x200 puntos
+        con la cantidad de colores mencionados anteriormente.
+      </p>
+      <p class="has-text-justified py-1">
+        <strong>La tarjeta SVGA:</strong>
+        la tarjeta SVGA (Super Video Graphics
+        Adapter) contiene conjuntos de chips de uso especial, y más
+        memoria, lo que aumenta la cantidad de colores y la resolución.
+      </p>
+      <p class="has-text-justified py-1">
+        <strong>El acelerador gráfico:</strong>
+        el acelerador gráfico se encarga de realizar
+        una serie de funciones relacionadas con la presentación de gráficos
+        en la pantalla, que, de otro modo, tendría que realizar el procesador.
+        De esta manera, le quita tareas de encima a este último, y así se
+        puede dedicar casi exclusivamente al proceso de datos.
+      </p>
+      <p class="has-text-justified py-1">
+        <strong>El coprocesador gráfico:</strong>
+        posteriormente, para lograr una mayor
+        velocidad se comenzaron a instalar en las tarjetas de video otros
+        circuitos especializados en el proceso de comandos gráficos,
+        llamados coprocesadores gráficos. Se encuentran especializados en
+        la ejecución de una serie de instrucciones específicas de generación
+        de gráficos.
+      </p>
+      <p class="has-text-justified py-1">
+        <strong>Aceleradores gráficos 3D:</strong>
+        los gráficos en tres dimensiones son una
+        representación gráfica de una escena o un objeto a lo largo de tres
+        ejes de referencia, X, Y, Z, que marcan el ancho, el alto y la
+        profundidad de ese gráfico. Para manejar un gráfico tridimensional,
+        éste se divide en una serie de puntos o vértices, en forma de
+        coordenadas, que se almacenan en la memoria RAM.
+      </p>
+      <h5 class="subtitle is-5 has-text-left">
+        <strong>3.3 Ambientes de servicios</strong>
+      </h5>
+      <p class="has-text-justified py-1">
+        El negocio de proveer servicios de datos es mucho más complejo que la forma en la que se dan los
+        tradicionales servicios, que con frecuencia se terminan involucrando o necesitando la colaboración
+        de terceras empresas.
+      </p>
+      <ol class="has-text-justified py-1">
+        <li>Desarrollo de nuevos mercados y productos</li>
+        <li>Adquisición y administración de clientes</li>
+        <li>Proveer y desarrollar servicios para la red</li>
+        <li>Administración del negocio</li>
+      </ol>
+      <h5 class="subtitle is-5 has-text-left">
+        <strong>3.3.1 Negocios</strong>
+      </h5>
+      <p class="has-text-justified py-1">
+        Definitivamente, la tecnología en general ha sido la causa principal y la acción más directa para la
+        transformación del trabajo de las organizaciones en la posguerra del siglo XX. Tanto los bienes de
+        capital «duros» (computadores, teléfonos, videos, facsímiles, grabadoras, etc.), como los
+        programas y sistemas de información y comunicación en general, han incrementado
+        enormemente la productividad y eficiencia de las organizaciones. Tenemos como ejemplos los
+        siguientes: bases de datos en redes de todo orden y topología, sistemas de reservaciones en
+        aerolíneas, sistemas de contabilidad y nóminas, archivos clínicos en centros de salud, sistemas de
+        conmutación electrónica y un sin número de otras aplicaciones a procesos administrativos.
+      </p>
     </div>
-
   </section>
 
   <footer class="footer has-background-dark py-6">

@@ -89,7 +89,8 @@
 
         <div class="container has-shadow has-text-centered py-1">
             <h3 class="title is-3">Unidad 4. Procesamiento Paralelo</h3>
-            <h5 class="subtitle is-5 has-text-left">4.1 Aspectos Básicos de la computación paralela</h5>
+            <h5 class="subtitle is-5 has-text-left"><strong>4.1 Aspectos Básicos de la computación paralela</strong>
+            </h5>
             <p class="has has-text-justified">La computación paralela es una forma de cómputo en la que muchas
                 instrucciones se ejecutan simultáneamente, operando sobre el
                 principio de que problemas grandes, a menudo se pueden dividir en
@@ -105,10 +106,8 @@
                 preocupación en los últimos años, la computación en paralelo se ha
                 convertido en el paradigma dominante en la arquitectura de
                 computadores, principalmente en forma de procesadores
-                multinúcleo.</p>
-            <figure class="image is-1by1 has-addons-right">
-                <img src="https://bulma.io/images/placeholders/128x128.png">
-            </figure>
+                multinúcleo.
+            </p>
             <p class="has-text-justified py-2">Los programas informáticos paralelos son más difíciles de escribir
                 que los secuenciales, porque la concurrencia introduce nuevos tipos
                 de errores de software, siendo las condiciones de carrera los más
@@ -116,7 +115,8 @@
                 subtareas son algunos de los mayores obstáculos para obtener un
                 buen rendimiento del programa paralelo. La máxima aceleración
                 posible de un programa como resultado de la paralelización se
-                conoce como la ley de Amdahl.</p>
+                conoce como la ley de Amdahl.
+            </p>
 
             <h5 class="subtitle is-5 has-text-left">
                 Ley de Amdahl y ley de Gustafson
@@ -211,14 +211,18 @@
             <p class="has-text-justified py-1">Muy fino: Fases de instrucción.</p>
             </p>
             <h5 class="subtitle is-5 has-text-left">
-                <strong> Modelos de consistencia</strong>
+                Modelos de consistencia
             </h5>
-            <p class="has-text-justified">
+            <p class="has-text-justified py-1">
                 Los lenguajes de programación en paralelo y computadoras paralelas
                 deben tener un modelo de consistencia de datos también conocido
                 como un modelo de memoria.
+            </p>
+            <p class="has-text-justified py-1">
                 El modelo de consistencia define reglas para las operaciones en la
                 memoria del ordenador y cómo se producen los resultados.
+            </p>
+            <p class="has-text-justified py-1">
                 Uno de los primeros modelos de consistencia fue el modelo de
                 consistencia secuencial de Leslie Lamport. La consistencia
                 secuencial es la propiedad de un programa en la que su ejecución en
@@ -228,6 +232,650 @@
                 operaciones de todos los procesadores son ejecutadas en un orden
                 secuencial, y las operaciones de cada procesador individual aparecen
                 en esta secuencia en el orden especificado por el programa".
+            </p>
+
+            <h5 class="subtitle is-5 has-text-left">
+                Taxonomía de Flynn.
+            </h5>
+            <p class="has-text-justified py-1">
+                <strong>Single Instruction, Single Data (SISD).</strong>
+            </p>
+            <p class="has-text-justified py-1">
+                Hay un elemento de procesamiento, que tiene acceso a un único
+                programa y a un almacenamiento de datos. En cada paso, el
+                elemento de procesamiento carga una instrucción y la información
+                correspondiente y ejecuta esta instrucción. El resultado es guardado
+                de vuelta en el almacenamiento de datos. Luego SISD es el
+                computador secuencial convencional, de acuerdo al modelo de von
+                Neumann.
+            </p>
+            <p class="has-text-justified py-1">
+                <strong>Multiple Instruction, Single Data (MISD).</strong>
+            </p>
+            <p class="has-text-justified py-1">
+                Hay múltiples elementos de procesamiento, en el que cada cual tiene
+                memoria privada del programa, pero se tiene acceso común a una
+                memoria global de información. En cada paso, cada elemento de
+                procesamiento de obtiene la misma información de la memoria y
+                carga una instrucción de la memoria privada del programa. Luego,
+                las instrucciones posiblemente diferentes de cada unidad, son
+                ejecutadas en paralelo, usando la información (idéntica) recibida
+                anteriormente. Este modelo es muy restrictivo y no se ha usado en
+                ningún computador de tipo comercial.
+            </p>
+            <p class="has-text-justified py-1">
+                <strong>Single Instruction, Multiple Data (SIMD).</strong>
+            </p>
+            <p class="has-text-justified py-1">
+                Hay múltiples elementos de procesamiento, en el que cada cual tiene
+                acceso privado a la memoria de información (compartida o
+                distribuida). Sin embargo, hay una sola memoria de programa, desde
+                la cual una unidad de procesamiento especial obtiene y despacha
+                instrucciones. En cada paso, cada unidad de procesamiento obtiene
+                la misma instrucción y carga desde su memoria privada un elemento
+                de información y ejecuta esta instrucción en dicho elemento.
+                Entonces, la instrucción es síncronamente aplicada en paralelo por
+                todos los elementos de proceso a diferentes elementos de
+                información. Para aplicaciones con un grado significante de
+                paralelismo de información, este acercamiento puede ser muy
+                eficiente. Ejemplos pueden ser aplicaciones multimedia y algoritmos
+                de gráficos de computadora.
+            </p>
+            <p class="has-text-justified py-1">
+                <strong>Multiple Instruction, Multiple Data (MIMD).</strong>
+            </p>
+            <p class="has-text-justified py-1">
+                Hay múltiples unidades de procesamiento, en la cual cada una tiene
+                tanto instrucciones como información separada. Cada elemento
+                ejecuta una instrucción distinta en un elemento de información
+                distinto. Los elementos de proceso trabajan asíncronamente. Los
+                clusters son ejemplo son ejemplos del modelo MIMD.
+            </p>
+            <h5 class="subtitle is-5 has-text-left">
+                <strong>4.2 Tipos de computación paralela</strong>
+            </h5>
+            <h5 class="subtitle is-5 has-text-left">
+                Paralelismo a nivel de bit.
+            </h5>
+            <p class="has-text-justified py-1">
+                Desde el advenimiento de la integración a gran escala (VLSI) como
+                tecnología de fabricación de chips de computadora en la década de
+                1970 hasta alrededor de 1986, la aceleración en la arquitectura de
+                computadores se lograba en gran medida duplicando el tamaño de la
+                palabra en la computadora, la cantidad de información que el
+                procesador puede manejar por ciclo. El aumento del tamaño de la
+                palabra reduce el número de instrucciones que el procesador debe
+                ejecutar para realizar una operación en variables cuyos tamaños son
+                mayores que la longitud de la palabra. Por ejemplo, cuando un
+                procesador de 8 bits debe sumar dos enteros de 16 bits, el
+                procesador primero debe adicionar los 8 bits de orden inferior de
+                cada número entero con la instrucción de adición, a continuación,
+                añadir los 8 bits de orden superior utilizando la instrucción de
+                adición con acarreo que tiene en cuenta el bit de acarreo de la
+                adición de orden inferior, en este caso un procesador de 8 bits
+                requiere dos instrucciones para completar una sola operación, en
+                donde un procesador de 16 bits necesita una sola instrucción para
+                poder completarla.
+            </p>
+            <p class="has-text-justified py-1">
+                Históricamente, los microprocesadores de 4 bits fueron sustituidos
+                por unos de 8 bits, luego de 16 bits y 32 bits, esta tendencia general
+                llegó a su fin con la introducción de procesadores de 64 bits, lo que
+                ha sido un estándar en la computación de propósito general durante
+                la última década.
+            </p>
+            <h5 class="subtitle is-5 has-text-left">
+                Paralelismo a nivel de instrucción.
+            </h5>
+            <p class="has-text-justified py-1">
+                Los procesadores modernos tienen ''pipeline'' de instrucciones de
+                varias etapas. Cada etapa en el pipeline corresponde a una acción
+                diferente que el procesador realiza en la instrucción correspondiente
+                a la etapa; un procesador con un pipeline de N etapas puede tener
+                hasta n instrucciones diferentes en diferentes etapas de finalización.
+                El ejemplo canónico de un procesador segmentado es un procesador
+                RISC, con cinco etapas: pedir instrucción, decodificar, ejecutar,
+                acceso a la memoria y escritura. El procesador Pentium 4 tenía un
+                pipeline de 35 etapas.
+            </p>
+            <p class="has-text-justified py-1">
+                Además del paralelismo a nivel de instrucción del pipelining,
+                algunos procesadores pueden ejecutar más de una instrucción a la
+                vez. Estos son conocidos como procesadores superescalares. Las
+                instrucciones pueden agruparse juntas sólo si no hay dependencia de
+                datos entre ellas. El scoreboarding y el algoritmo de Tomasulo —
+                que es similar a scoreboarding pero hace uso del renombre de
+                registros— son dos de las técnicas más comunes para implementar
+                la ejecución fuera de orden y la paralelización a nivel de instrucción.
+            </p>
+            <h5 class="subtitle is-5 has-text-left">
+                Paralelismo de datos.
+            </h5>
+            <p class="has-text-justified py-1">
+                El paralelismo de datos es el paralelismo inherente en programas
+                con ciclos, que se centra en la distribución de los datos entre los
+                diferentes nodos computacionales que deben tratarse en paralelo.
+                "La paralelización de ciclos conduce a menudo a secuencias
+                similares de operaciones —no necesariamente idénticas— o
+                funciones que se realizan en los elementos de una gran estructura de
+                datos". Muchas de las aplicaciones científicas y de ingeniería
+                muestran paralelismo de datos.
+            </p>
+            <p class="has-text-justified py-1">
+                Una dependencia de terminación de ciclo es la dependencia de una
+                iteración de un ciclo en la salida de una o más iteraciones anteriores.
+                Las dependencias de terminación de ciclo evitan la paralelización de
+                ciclos.
+            </p>
+            <h5 class="subtitle is-5 has-text-left">
+                Paralelismo de tareas.
+            </h5>
+            <p class="has-text-justified py-1">
+                Paralelismo de tareas es un paradigma de la programación
+                concurrente que consiste en asignar distintas tareas a cada uno de los
+                procesadores de un sistema de cómputo. En consecuencia, cada
+                procesador efectuará su propia secuencia de operaciones.
+                En su modo más general, el paralelismo de tareas se representa
+                mediante un grafo de tareas, el cual es subdividido en subgrafos que
+                son luego asignados a diferentes procesadores. De la forma como se
+                corte el grafo, depende la eficiencia de paralelismo resultante. La
+                partición y asignación óptima de un grafo de tareas para ejecución
+                concurrente es un problema NP-completo, por lo cual en la práctica
+                se dispone de métodos heurísticos aproximados para lograr una
+                asignación cercana a la óptima.
+            </p>
+            <p class="has-text-justified py-1">
+                Sin embargo, existen ejemplos de paralelismo de tareas restringido
+                que son de interés en programación concurrente. Tal es el caso del
+                paralelismo encauzado, en el cual el grafo tiene forma de cadena,
+                donde cada nodo recibe datos del nodo previo y sus resultados son
+                enviados al nodo siguiente. El carácter simplificado de este modelo
+                permite obtener paralelismo de eficiencia óptima.
+            </p>
+            <h5 class="subtitle is-5 has-text-left">
+                <strong>4.2.1 Clasificación</strong>
+            </h5>
+            <p class="has-text-justified py-1">
+                Las computadoras paralelas se pueden clasificar de acuerdo con el
+                nivel en el que el hardware soporta paralelismo. Esta clasificación es
+                análoga a la distancia entre los nodos básicos de cómputo. Estos no
+                son excluyentes entre sí, por ejemplo, los grupos de
+                multiprocesadores simétricos son relativamente comunes.
+            </p>
+            <p class="has-text-justified py-1">
+                <strong>Computación multinúcleo:</strong>
+                un procesador multinúcleo es un
+                procesador que incluye múltiples unidades de ejecución
+                (núcleos) en el mismo chip. Un procesador multinúcleo puede
+                ejecutar múltiples instrucciones por ciclo de secuencias de
+                instrucciones múltiples.
+            </p>
+            <p class="has-text-justified py-1">
+                <strong>Multiŕocesamiento simétrico:</strong>
+                un multiprocesador simétrico
+                (SMP) es un sistema computacional con múltiples
+                procesadores idénticos que comparten memoria y se conectan
+                a través de un bus. La contención del bus previene el escalado
+                de esta arquitectura.
+            </p>
+            <p class="has-text-justified py-1">
+                <strong>Computación en clúster:</strong>
+                un clúster es un grupo de
+                ordenadores débilmente acoplados que trabajan en estrecha
+                colaboración, de modo que en algunos aspectos pueden
+                considerarse como un solo equipo.
+            </p>
+            <p class="has-text-justified py-1">
+                <strong>Computación distribuida:</strong>
+                tienden a ser más grandes
+                que los clústeres, con «mucho más» de 100 procesadores. En
+                un MPP, cada CPU tiene su propia memoria y una copia del
+                sistema operativo y la aplicación.
+            </p>
+            <p class="has-text-justified py-1">
+                <strong>Computadoras paralelas especializadas:</strong>
+                dentro de la
+                computación paralela, existen dispositivos paralelos
+                especializados que generan interés. Aunque no son específicos
+                para un dominio, tienden a ser aplicables sólo a unas pocas
+                clases de problemas paralelos.
+            </p>
+            <p class="has-text-justified py-1">
+                <strong>
+                    Cómputo reconfigurable con arreglos de compuertas programables
+                </strong>
+                el cómputo reconfigurable es el uso de un
+                arreglo de compuertas programables (FPGA) como
+                coprocesador de un ordenador de propósito general.
+            </p>
+            <p class="has-text-justified py-1">
+                <strong>
+                    Cómputo de propósito general en unidades de
+                    procesamiento gráfico (GPGPU):
+                </strong>
+                es una tendencia
+                relativamente reciente en la investigación de ingeniería
+                informática. Los GPUs son co-procesadores que han sido
+                fuertemente optimizados para procesamiento de gráficos por
+                computadora.
+            </p>
+            <p class="has-text-justified py-1">
+                <strong>Circuitos integrados de aplicación específica:</strong>
+                debido a que
+                un ASIC (por definición) es específico para una aplicación
+                dada, puede ser completamente optimizado para esa
+                aplicación. Como resultado, para una aplicación dada, un
+                ASIC tiende a superar a un ordenador de propósito general.
+            </p>
+            <p class="has-text-justified py-1">
+                <strong>Procesadores vectoriales:</strong>
+                pueden ejecutar la misma
+                instrucción en grandes conjuntos de datos. Tienen operaciones
+                de alto nivel que trabajan sobre arreglos lineales de números o
+                vectores.
+            </p>
+            <h5 class="subtitle is-5 has-text-left">
+                <strong>4.2.2 Arquitectura de computadores secuenciales</strong>
+            </h5>
+            <p class="has-text-justified py-1">
+                A diferencia de los sistemas combinacionales, en los sistemas
+                secuenciales, los valores de las salidas, en un momento dado, no
+                dependen exclusivamente de los valores de las entradas en dicho
+                momento, sino también dependen del estado anterior o estado
+                interno. El sistema secuencial más simple es el biestable, de los
+                cuales, el de tipo D (o cerrojo) es el más utilizado actualmente.
+            </p>
+            <p class="has-text-justified py-1">
+                El sistema secuencial requiere de la utilización de un dispositivo de
+                memoria que pueda almacenar la historia pasada de sus entradas
+                (denominadas variables de estado) y le permita mantener su estado
+                durante algún tiempo, estos dispositivos de memoria pueden ser
+                sencillos como un simple retardador o celdas de memoria de tipo
+                DRAM, SRAM o multivibradores biestables también conocido
+                como Flip-Flop.
+            </p>
+            <h5 class="subtitle is-5 has-text-left">
+                Tipos de sistemas secuenciales
+            </h5>
+            <p class="has-text-justified py-1">
+                En este tipo de circuitos entra un factor que no se había considerado
+                en los circuitos combinacionales, dicho factor es el tiempo, según
+                como manejan el tiempo se pueden clasificar en: circuitos
+                secuenciales síncronos y circuitos secuenciales asíncronos.
+            </p>
+            <h5 class="subtitle is-5 has-text-left">
+                Circuitos secuenciales asíncronos
+            </h5>
+            <p class="has-text-justified py-1">
+                En circuitos secuenciales asíncronos los cambios de estados ocurren
+                al ritmo natural asociado a las compuertas lógicas utilizadas en su
+                implementación, lo que produce retardos en cascadas entre los
+                biestables del circuito, es decir no utilizan elementos especiales de
+                memoria, lo que puede ocasionar algunos problemas de
+                funcionamiento, ya que estos retardos naturales no están bajo el
+                control del diseñador y además no son idénticos en cada compuerta
+                lógica.
+            </p>
+            <h5 class="subtitle is-5 has-text-left">
+                Circuitos secuenciales síncronos
+            </h5>
+            <p class="has-text-justified py-1">
+                Los circuitos secuenciales síncronos solo permiten un cambio de
+                estado en los instantes marcados o autorizados por una señal de
+                sincronismo de tipo oscilatorio denominada reloj (cristal o circuito
+                capaz de producir una serie de pulsos regulares en el tiempo), lo que
+                soluciona los problemas que tienen los circuitos asíncronos
+                originados por cambios de estado no uniformes dentro del sistema o
+                circuito.
+            </p>
+            <h5 class="subtitle is-5 has-text-left">
+                <strong>4.2.3 Organización de direcciones de memoria</strong>
+            </h5>
+            <p class="has-text-justified py-1">
+                La memoria principal en un ordenador en paralelo puede ser
+                compartida —compartida entre todos los elementos de
+                procesamiento en un único espacio de direcciones—, o distribuida
+                —cada elemento de procesamiento tiene su propio espacio local de
+                direcciones—. El término memoria distribuida se refiere al hecho de
+                que la memoria se distribuye lógicamente, pero a menudo implica
+                que también se distribuyen físicamente. La memoria distribuida-
+                compartida y la virtualización de memoria combinan los dos
+                enfoques, donde el procesador tiene su propia memoria local y
+                permite acceso a la memoria de los procesadores que no son locales.
+                Los accesos a la memoria local suelen ser más rápidos que los
+                accesos a memoria no local.
+            </p>
+            <p class="has-text-justified py-1">
+                Las arquitecturas de ordenador en las que cada elemento de la
+                memoria principal se puede acceder con igual latencia y ancho de
+                banda son conocidas como arquitecturas de acceso uniforme a
+                memoria (UMA). Típicamente, sólo se puede lograr con un sistema
+                de memoria compartida, donde la memoria no está distribuida
+                físicamente. Un sistema que no tiene esta propiedad se conoce como
+                arquitectura de acceso a memoria no uniforme (NUMA). Los
+                sistemas de memoria distribuidos tienen acceso no uniforme a la
+                memoria.
+            </p>
+            <h5 class="subtitle is-5 has-text-left">
+                <strong>4.3 Sistemas de memoria compartida (multiprocesadores)</strong>
+            </h5>
+            <ul class="has-text-justified py1">
+                <li>Todos los procesadores acceden a una memoria común.</li>
+                <li>La comunicación entre procesadores se hace a través de la
+                    memoria.</li>
+                <li>Se necesitan primitivas de sincronismo para asegurar el
+                    intercambio de datos.</li>
+            </ul>
+            <h5 class="subtitle is-5 has-text-left">
+                Estructura de los multiprocesadores de memoria compartida
+            </h5>
+            <p class="has-text-justified py-1">
+                La mayoría de los multiprocesadores comerciales son del tipo UMA
+                (Uniform Memory Access): todos los procesadores tienen igual
+                tiempo de acceso a la memoria compartida. En la arquitectura UMA
+                los procesadores se conectan a la memoria a través de un bus, una
+                red multietapa o un conmutador de barras cruzadas (red multietapa o
+                un conmutador de barras cruzadas (crossbar crossbar) y disponen de
+                su propia ) y disponen de su propia memoria caché. Los
+                procesadores tipo NUMA (Non Uniform Memory Access) presentan
+                tiempos de acceso a la memoria compartida que dependen de la
+                ubicación del elemento de proceso y la memoria.
+            </p>
+            <h5 class="subtitle is-5 has-text-left">
+                <strong>4.3.1 Redes de interconexión dinámica (indirecta)</strong>
+            </h5>
+            <h5 class="subtitle is-5 has-text-left">
+                Conexión por bus compartido.
+            </h5>
+            <p class="has-text-justified py-1">
+                Es la organización más común en los computadores personales y
+                servidores.
+                El bus consta de líneas de dirección, datos y control para
+                implementar:
+            </p>
+            <ol class="has-text-justified py-1">
+                <li>El protocolo de transferencias de datos con la memoria.</li>
+                <li>El arbitraje del acceso al bus cuando más de un procesador
+                    compite por utilizarlo.
+                </li>
+                Los procesadores utilizan cachés locales para:
+                <li>
+                    Reducir el tiempo medio de acceso a memoria, como en un
+                    monoprocesador.
+                </li>
+                <li>
+                    Disminuir la utilización del bus compartido.
+                </li>
+            </ol>
+            <h5 class="subtitle is-5 has-text-left">
+                Protocolos de transferencia de ciclo partido
+            </h5>
+            <p class="has-text-justified py-1">
+                La operación de lectura se divide en dos transacciones no continuas
+                de acceso al bus. La primera es de petición de lectura que realiza el
+                máster (procesador) sobre el slave (memoria). Una vez realizada la
+                petición el máster abandona el bus. Cuando el slave dispone del dato
+                leído, inicia un ciclo de bus actuando como máster para enviar el
+                dato al antiguo máster, que ahora actúa como slave.
+            </p>
+            <h5 class="subtitle is-5 has-text-left">
+                Protocolo de arbitraje distribuido
+            </h5>
+            <p class="has-text-justified py-1">
+                La responsabilidad del arbitraje se distribuye por los diferentes
+                procesadores conectados al bus.
+            </p>
+            <ol class="has-text-justified py-1">
+                <li>Pi ha activado su línea de petición de bus Ri.</li>
+                <li>La línea de ocupación está desactivada.</li>
+                <li>La línea de entrada de prioridad pi-1 está activada.</li>
+                El árbitro i activa su línea de prioridad pi si:
+                <li>Pi no ha activado su línea de petición Ri.</li>
+                <li>La línea de prioridad pi-1 está activa.</li>
+                <li>Finaliza una operación de acceso al bus.</li>
+            </ol>
+            <h5 class="subtitle is-5 has-text-justified py-1">
+                Conexión por conmutadores crossbar
+            </h5>
+            <p class="has-text-justified py-1">
+                Cada procesador (Pi) y cada módulo de memoria (Mi) tienen su
+                propio bus. Existe un conmutador (S) en los puntos de intersección
+                que permite conectar un bus de memoria con un bus de procesador.
+                Para evitar conflictos cuando más de un procesador pretende acceder
+                al mismo módulo de memoria se establece un orden de prioridad. Se
+                trata de una red sin bloqueo con una conectividad completa pero de
+                alta complejidad.
+            </p>
+            <h5 class="subtitle is-5 has-text-justified py-1">
+                Conexión por red multietapa
+            </h5>
+            <p class="has-text-justified py-1">
+                Representan una alternativa intermedia de conexión entre el
+                bus y el crossbar.
+            </p>
+            <p class="has-text-justified py-1">
+                Es de menor complejidad que el crossbar pero mayor que el
+                bus simple.
+            </p>
+            <p class="has-text-justified py-1">
+                La conectividad es mayor que la del bus simple pero menor
+                que la del crossbar.
+            </p>
+            <p class="has-text-justified py-1">
+                Se compone de varias etapas alternativas de conmutadores
+                simples y redes de interconexión.
+            </p>
+            <h5 class="subtitle is-5 has-text-justified py-1">
+                <strong>4.4 Sistemas de memoria distribuida (multicomputadores)</strong>
+            </h5>
+            <p class="has-text-justified py-1">
+                Cada procesador tiene su propia memoria y la comunicación se
+                realiza por intercambio explícito de mensajes a través de una red.
+            </p>
+            <h5 class="subtitle is-5 has-text-justified py-1">
+                Ventajas
+            </h5>
+            <p class="has-text-justified py-1">
+                El número de nodos puede ir desde algunas decenas hasta
+                varios miles (o más).
+            </p>
+            <p class="has-text-justified py-1">
+                La arquitectura de paso de mensajes tiene ventajas sobre la de
+                memoria compartida cuando el número de procesadores es
+                grande.
+            </p>
+            <p class="has-text-justified py-1">
+                El número de canales físicos entre nodos suele oscilar entre
+                cuatro y ocho.
+            </p>
+            <p class="has-text-justified py-1">
+                Esta arquitectura es directamente escalable y presenta un bajo
+                coste para sistemas grandes.
+            </p>
+            <p class="has-text-justified py-1">
+                Un problema se especifica como un conjunto de procesos que
+                se comunican entre sí y que se hacen corresponder sobre la
+                estructura física de procesadores.
+            </p>
+            <h5 class="subtitle is-5 has-text-justified py-1">
+                Desventajas
+            </h5>
+            <p class="has-text-justified py-1">
+                Se necesitan técnicas de sincronización para acceder a las
+                variables compartidas.
+            </p>
+            <p class="has-text-justified py-1">
+                La contención en la memoria puede reducir significativamente
+                la velocidad.
+            </p>
+            <p class="has-text-justified py-1">
+                No son fácilmente escalables a un gran número de
+                procesadores.
+            </p>
+            <h5 class="subtitle is-5 has-text-justified py-1">
+                <strong>4.4.1 Redes de interconexión estáticas</strong>
+            </h5>
+            <p class="has-text-justified py-1">
+                Los multicomputadores utilizan redes estáticas con enlaces directos
+                entre nodos. Cuando un nodo recibe un mensaje lo procesa si viene
+                dirigido a dicho nodo. Si el mensaje no va dirigido al nodo receptor
+                lo reenvía a otro por alguno de sus enlaces de salida siguiendo un
+                protocolo de encaminamiento.
+            </p>
+            <h5 class="subtitle is-5 has-text-justified py-1">
+                Propiedades más significativas
+            </h5>
+            <p class="has-text-justified py-1">
+                <strong>Topología de la red:</strong>
+                determina el patrón de interconexión
+                entre nodos.
+            </p>
+            <p class="has-text-justified py-1">
+                <strong>Diámetro de la red:</strong>
+                distancia máxima de los caminos más
+                cortos entre dos nodos de la red.
+            </p>
+            <p class="has-text-justified py-1">
+                <strong>Latencia:</strong>
+                retardo de tiempo en el peor caso para un mensaje
+                transferido a través de la red.
+            </p>
+            <p class="has-text-justified py-1">
+                <strong>Ancho de banda:</strong>
+                Transferencia máxima de datos en
+                Mbytes/segundo.
+            </p>
+            <p class="has-text-justified py-1">
+                <strong>Escalabilidad:</strong>
+                posibilidad de expansión modular de la red.
+            </p>
+            <p class="has-text-justified py-1">
+                <strong>Grado de un nodo:</strong>
+                número de enlaces o canales que inciden
+                en el nodo.
+            </p>
+            <p class="has-text-justified py-1">
+                <strong>Algoritmo de encaminamiento:</strong>
+                determina el camino que
+                debe seguir un mensaje desde el nodo emisor al nodo receptor.
+            </p>
+            <h5 class="subtitle is-5 has-text-justified py-1">
+                <strong>4.5 Casos para estudio</strong>
+            </h5>
+            <p class="has-text-justified py-1">
+                Por numerosos motivos, el procesamiento distribuido se ha
+                convertido en un área de gran importancia e interés dentro de la
+                ciencia de la computación, produciendo profundas transformaciones
+                en las líneas de investigación y desarrollo.
+            </p>
+            <p class="has-text-justified py-1">
+                Interesa realizar investigación en la especificación, transformación,
+                optimización y evaluación de algoritmos distribuidos y paralelos.
+                Esto incluye el diseño y desarrollo de sistemas paralelos, la
+                transformación de algoritmos secuenciales en paralelos, y las
+                métricas de evaluación de performance sobre distintas plataformas
+                de soporte (hardware y software). Más allá de las mejoras constantes
+                en las arquitecturas físicas de soporte, uno de los mayores desafíos
+                se centra en cómo aprovechar al máximo la potencia de las mismas.
+            </p>
+            <h5 class="subtitle is-5 has-text-justified py-1">
+                Líneas de investigación y desarrollo
+            </h5>
+            <p class="has-text-justified py-1">
+                Paralelización de algoritmos secuenciales. Diseño y
+                optimización de algoritmos.
+            </p>
+            <p class="has-text-justified py-1">
+                Arquitecturas multicore y multithreading en multicore.
+            </p>
+            <p class="has-text-justified py-1">
+                Modelos de representación y predicción de performance de
+                algoritmos paralelos.
+            </p>
+            <p class="has-text-justified py-1">
+                Mapping y scheduling de aplicaciones paralelas sobre distintas
+                arquitecturas multiprocesador.
+            </p>
+            <p class="has-text-justified py-1">
+                Métricas del paralelismo. Speedup, eficiencia, rendimiento,
+                granularidad, superlinealidad.
+            </p>
+            <p class="has-text-justified py-1">
+                Balance de carga estático y dinámico. Técnicas de balanceo de
+                carga.
+            </p>
+            <p class="has-text-justified py-1">
+                Análisis de los problemas de migración y asignación óptima de
+                procesos y datos a procesadores.
+            </p>
+            <p class="has-text-justified py-1">
+                Patrones de diseño de algoritmos paralelos.
+            </p>
+            <p class="has-text-justified py-1">
+                Escalabilidad de algoritmos paralelos en arquitecturas
+                multiprocesador distribuidas.
+            </p>
+            <p class="has-text-justified py-1">
+                Implementación de soluciones sobre diferentes modelos de
+                arquitectura homogéneas y heterogéneas.
+            </p>
+            <p class="has-text-justified py-1">
+                Laboratorios remotos para el acceso transparente a recursos de
+                cómputo paralelo.
+            </p>
+            <h5 class="subtitle is-5 has-text-justified py-1">
+                NVIDIA
+            </h5>
+            <p class="has-text-justified py-1">
+                Capa física (physical layer):
+            </p>
+            <p class="has-text-justified py-1">
+                GPU PhysX.
+            </p>
+            <p class="has-text-justified py-1">
+                CPU PhysX.
+            </p>
+            <p class="has-text-justified py-1">
+                Capa de gráficos (graphics layer):
+            </p>
+            <p class="has-text-justified py-1">
+                GPU DirectX Windows.
+            </p>
+            <h5 class="subtitle is-5 has-text-justified py-1">
+                Intel
+            </h5>
+            <p class="has-text-justified py-1">
+                Capa física (physical layer):
+            </p>
+            <p class="has-text-justified py-1">
+                No GPU PhysX.
+            </p>
+            <p class="has-text-justified py-1">
+                CPU Havok.
+            </p>
+            <p class="has-text-justified py-1">
+                Capa de gráficos (graphics layer):
+            </p>
+            <p class="has-text-justified py-1">
+                GPU DirectX Windows.
+            </p>
+            <h5 class="subtitle is-5 has-text-justified py-1">
+                AMD
+            </h5>
+            <p class="has-text-justified py-1">
+                Capa física (physical layer):
+            </p>
+            <p class="has-text-justified py-1">
+                No GPU PhysX.
+            </p>
+            <p class="has-text-justified py-1">
+                CPU Havok.
+            </p>
+            <p class="has-text-justified py-1">
+                Capa de gráficos (graphics layer):
+            </p>
+            <p class="has-text-justified py-1">
+                GPU DirectX Windows.
             </p>
         </div>
 
